@@ -10,17 +10,16 @@ export function tree() {
 
     // define a simple Node template
     diagram.nodeTemplate = new go.Node('Horizontal', {
-        background: '#44CCFF',
+        background: 'white',
     }).add(
         new go.Picture({
-            margin: 10,
             width: 120,
-            height: 120,
+            height: 60,
             background: 'red',
         }).bind('source'),
         new go.TextBlock('Default Text', {
             margin: 12,
-            stroke: 'white',
+            stroke: 'black',
             font: 'bold 16px sans-serif',
         }).bind('text', 'name'),
     );

@@ -1,8 +1,8 @@
-import Freightliner from '../../../assets/Freightliner.png';
-import Phantom from '../../../assets/Phantom.png';
-import Phantom2 from '../../../assets/Phantom2.png';
-import Hauler from '../../../assets/Hauler.png';
-import Hauler2 from '../../../assets/Hauler2.png';
+import Freightliner from '../assets/Freightliner.png';
+import Phantom from '../assets/Phantom.png';
+import Phantom2 from '../assets/Phantom2.png';
+import Hauler from '../assets/Hauler.png';
+import Hauler2 from '../assets/Hauler2.png';
 
 export const links = [
     {

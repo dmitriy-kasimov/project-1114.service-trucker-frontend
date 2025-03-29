@@ -10,4 +10,10 @@ export default defineConfig({
             svgrOptions: { exportType: 'default' },
         }),
     ],
+    resolve: {
+        alias: {
+            '@': '/src',
+        },
+    },
+    base: './',
 });
