@@ -1,0 +1,7 @@
+/* App.css */
+.myDiagramDiv{
+    width: 700px;
+    height: 700px;
+    border: solid 1px black;
+    background-color: white;
+}
