@@ -5,7 +5,7 @@ export function tree() {
     // set your license key here before creating the diagram: go.Diagram.licenseKey = "...";
     const diagram = new go.Diagram({
         'undoManager.isEnabled': true,
-        layout: new go.TreeLayout({ angle: 270, layerSpacing: 100 }),
+        layout: new go.TreeLayout({ angle: 270, layerSpacing: 60 }),
     });
 
     // define a simple Node template
@@ -15,7 +15,6 @@ export function tree() {
         new go.Picture({
             width: 120,
             height: 60,
-            background: 'red',
         }).bind('source'),
         new go.TextBlock('Default Text', {
             margin: 12,
