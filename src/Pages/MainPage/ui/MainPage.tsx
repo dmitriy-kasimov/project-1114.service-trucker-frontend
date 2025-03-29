@@ -1,6 +1,12 @@
 import { FC } from 'react';
-import { HeavyTrucksTree } from '../../../widgets/HeavyTrucksTree';
+import { HeavyTrucksTree } from '@/widgets/HeavyTrucksTree';
+import { VansTree } from '@/widgets/VansTree';
 
 export const MainPage: FC = () => {
-    return <HeavyTrucksTree />;
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+            <HeavyTrucksTree />
+            <VansTree />
+        </div>
+    );
 };
