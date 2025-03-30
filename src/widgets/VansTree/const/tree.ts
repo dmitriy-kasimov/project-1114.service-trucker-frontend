@@ -5,11 +5,12 @@ export function tree() {
     // set your license key here before creating the diagram: go.Diagram.licenseKey = "...";
     const diagram = new go.Diagram({
         'undoManager.isEnabled': true,
-        layout: new go.TreeLayout({ angle: 270, layerSpacing: 60 }),
+
+        layout: new go.TreeLayout({ angle: 0, layerSpacing: 100 }),
     });
 
     // define a simple Node template
-    diagram.nodeTemplate = new go.Node('Horizontal', {
+    diagram.nodeTemplate = new go.Node('Vertical', {
         background: 'white',
     }).add(
         new go.Picture({
@@ -24,7 +25,8 @@ export function tree() {
     );
 
     // the same model as before
-    diagram.model = new go.TreeModel(links);
+    const z = (diagram.model = new go.TreeModel(links));
+    z.isReadOnly = true;
 
     return diagram;
 }

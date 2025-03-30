@@ -9,7 +9,7 @@ export function tree() {
     });
 
     // define a simple Node template
-    diagram.nodeTemplate = new go.Node('Horizontal', {
+    diagram.nodeTemplate = new go.Node('Vertical', {
         background: 'white',
     }).add(
         new go.Picture({

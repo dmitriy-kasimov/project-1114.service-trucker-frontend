@@ -23,7 +23,6 @@ import Burrito2 from '../assets/Burrito2.png';
 import Burrito3 from '../assets/Burrito3.png';
 import Burrito4 from '../assets/Burrito4.png';
 import GBurrito from '../assets/GBurrito.webp';
-import GBurrito2 from '../assets/GBurrito2.png';
 
 import Youga from '../assets/Youga.png';
 import Youga2 from '../assets/Youga2.webp';
@@ -51,44 +50,6 @@ export const links = [
         name: 'SlamVan 2',
         source: SlamVan2,
         parent: 'Surfer',
-    },
-
-    {
-        key: 'Rumpo',
-        name: 'Rumpo',
-        source: Rumpo,
-        parent: 'SlamVan2',
-    },
-    {
-        key: 'Rumpo2',
-        name: 'Rumpo 2',
-        source: Rumpo2,
-        parent: 'Rumpo',
-    },
-    {
-        key: 'Rumpo3',
-        name: 'Rumpo 3',
-        source: Rumpo3,
-        parent: 'Rumpo2',
-    },
-
-    {
-        key: 'Youga',
-        name: 'Youga',
-        source: Youga,
-        parent: 'SlamVan2',
-    },
-    {
-        key: 'Youga2',
-        name: 'Youga 2',
-        source: Youga2,
-        parent: 'Youga',
-    },
-    {
-        key: 'Youga3',
-        name: 'Youga 3',
-        source: Youga3,
-        parent: 'Youga2',
     },
 
     {
@@ -121,12 +82,6 @@ export const links = [
         source: GBurrito,
         parent: 'Burrito4',
     },
-    {
-        key: 'GBurrito2',
-        name: 'GBurrito 2',
-        source: GBurrito2,
-        parent: 'GBurrito',
-    },
 
     {
         key: 'Speedo',
@@ -139,6 +94,44 @@ export const links = [
         name: 'Speedo 4',
         source: Speedo4,
         parent: 'Speedo',
+    },
+
+    {
+        key: 'Youga',
+        name: 'Youga',
+        source: Youga,
+        parent: 'Speedo4',
+    },
+    {
+        key: 'Youga2',
+        name: 'Youga 2',
+        source: Youga2,
+        parent: 'Youga',
+    },
+    {
+        key: 'Youga3',
+        name: 'Youga 3',
+        source: Youga3,
+        parent: 'Youga2',
+    },
+
+    {
+        key: 'Rumpo',
+        name: 'Rumpo',
+        source: Rumpo,
+        parent: 'Speedo4',
+    },
+    {
+        key: 'Rumpo2',
+        name: 'Rumpo 2',
+        source: Rumpo2,
+        parent: 'Rumpo',
+    },
+    {
+        key: 'Rumpo3',
+        name: 'Rumpo 3',
+        source: Rumpo3,
+        parent: 'Rumpo2',
     },
 
     {
