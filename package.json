@@ -10,14 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "gojs": "^3.0.21",
-    "gojs-react": "^1.1.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-xarrows": "^2.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
-    "@project-1114/ui-kit": "^0.0.5",
+    "@project-1114/ui-kit": "^0.0.8",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
