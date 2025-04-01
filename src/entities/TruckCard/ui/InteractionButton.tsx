@@ -3,6 +3,8 @@ import { TTruckState } from '../model/types/TTruckState.ts';
 import { Button, Tooltip, Text } from '@project-1114/ui-kit';
 import { TruckExplore } from '@/features/TruckExplore';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
+import { TruckBuy } from '@/features/TruckBuy';
+import { TruckSale } from '@/features/TruckSale';
 
 type InteractionButtonProps = {
     model: TruckModels;
@@ -28,7 +30,9 @@ export const InteractionButton: FC<InteractionButtonProps> = ({
                         </Text>
                     }
                 >
-                    <Button fullWidth>Открыть за {state.priceScore}</Button>
+                    <Button disabled fullWidth>
+                        Открыть за {state.priceScore}
+                    </Button>
                 </Tooltip>
             );
         return (
@@ -46,10 +50,12 @@ export const InteractionButton: FC<InteractionButtonProps> = ({
                         </Text>
                     }
                 >
-                    <Button fullWidth>Приобрести за {state.priceCash}</Button>
+                    <Button disabled fullWidth>
+                        Приобрести за {state.priceCash}
+                    </Button>
                 </Tooltip>
             );
-        return <Button fullWidth>Приобрести за {state.priceCash}</Button>;
+        return <TruckBuy model={model} priceCash={state.priceCash || 0} />;
     }
 
     const cantSale = !state.canSale;
@@ -58,8 +64,15 @@ export const InteractionButton: FC<InteractionButtonProps> = ({
             <Tooltip
                 content={<Text color={'error'}>Ты не можешь его продать</Text>}
             >
-                <Button fullWidth>Продать за {state.priceCashForSale}</Button>
+                <Button disabled fullWidth>
+                    Продать за {state.priceCashForSale}
+                </Button>
             </Tooltip>
         );
-    return <Button fullWidth>Продать за {state.priceCashForSale}</Button>;
+    return (
+        <TruckSale
+            model={model}
+            priceCashForSale={state.priceCashForSale || 0}
+        />
+    );
 };

@@ -9,33 +9,33 @@ import {
 } from '@project-1114/ui-kit';
 import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
-type TruckExploreProps = {
+type TruckBuyProps = {
     model: TruckModels;
-    priceScore: number;
+    priceCash: number;
 };
 
-export const TruckExplore: FC<TruckExploreProps> = ({ model, priceScore }) => {
+export const TruckBuy: FC<TruckBuyProps> = ({ model, priceCash }) => {
     const [modal, setModal] = useState(false);
 
-    const handleExploreTruck = () => {
+    const handleBuyTruck = () => {
         setModal(true);
     };
     return (
         <>
             <Button
                 fullWidth
-                onClick={handleExploreTruck}
-                style={{ background: 'DarkGreen' }}
+                onClick={handleBuyTruck}
+                style={{ background: 'DarkOrange' }}
             >
-                Открыть за {priceScore}
+                Купить за {priceCash}
             </Button>
             <ModalConfirm
                 isOpen={modal}
                 onClose={() => setModal(false)}
-                onConfirm={() => console.log('You explored')}
+                onConfirm={() => console.log('You bought')}
             >
                 <HStack gap={'l'} align={'end'}>
-                    <Text>Открыть</Text>
+                    <Text>Приобрести</Text>
                     <VStack>
                         <Text size={'l'}>{TruckInfo[model].name}</Text>
                         <img
@@ -45,7 +45,7 @@ export const TruckExplore: FC<TruckExploreProps> = ({ model, priceScore }) => {
                             style={{ width: 120, height: 60 }}
                         />
                     </VStack>
-                    <Text>за {priceScore} опыта?</Text>
+                    <Text>за {priceCash} денег?</Text>
                 </HStack>
             </ModalConfirm>
         </>
