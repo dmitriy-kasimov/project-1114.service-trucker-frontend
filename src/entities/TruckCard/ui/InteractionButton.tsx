@@ -18,10 +18,10 @@ export const InteractionButton: FC<InteractionButtonProps> = ({ state }) => {
                 <Tooltip
                     content={<Text color={'error'}>Не хватает опыта</Text>}
                 >
-                    <Button>Can't explore</Button>
+                    <Button fullWidth>Can't explore</Button>
                 </Tooltip>
             );
-        return <Button>Explore</Button>;
+        return <Button fullWidth>Explore</Button>;
     }
     if (notBought) {
         const cantBuy = !state.canBuy;
@@ -30,10 +30,10 @@ export const InteractionButton: FC<InteractionButtonProps> = ({ state }) => {
                 <Tooltip
                     content={<Text color={'error'}>Не хватает денег</Text>}
                 >
-                    <Button>Can't buy</Button>
+                    <Button fullWidth>Can't buy</Button>
                 </Tooltip>
             );
-        return <Button>Buy</Button>;
+        return <Button fullWidth>Buy</Button>;
     }
-    return <Button>Sale</Button>;
+    return <Button fullWidth>Sale</Button>;
 };
