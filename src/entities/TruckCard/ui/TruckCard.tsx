@@ -1,11 +1,12 @@
 import { FC, HTMLAttributes } from 'react';
-import { VStack, Text } from '@project-1114/ui-kit';
+import { Text } from '@project-1114/ui-kit';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
 import cls from './TruckCard.module.scss';
 import { TTruckState } from '@/entities/TruckCard/model/types/TTruckState.ts';
 import { InteractionButton } from '@/entities/TruckCard/ui/InteractionButton.tsx';
+import { EntityCard } from '@/shared/components/EntityCard';
 
 interface ITruckCard extends HTMLAttributes<HTMLDivElement> {
     model: TruckModels;
@@ -13,12 +14,13 @@ interface ITruckCard extends HTMLAttributes<HTMLDivElement> {
 }
 export const TruckCard: FC<ITruckCard> = ({ model, state, ...props }) => {
     return (
-        <VStack gap={'xs'}>
-            <Text color={'secondary'} size={'l'}>
-                {TruckInfo[model].name}
-            </Text>
-
-            <div className={cls.imgWrapper}>
+        <EntityCard
+            label={
+                <Text color={'secondary'} size={'l'}>
+                    {TruckInfo[model].name}
+                </Text>
+            }
+            img={
                 <img
                     src={TruckInfo[model].img}
                     alt={TruckInfo[model].name}
@@ -26,9 +28,8 @@ export const TruckCard: FC<ITruckCard> = ({ model, state, ...props }) => {
                     className={cls.img}
                     {...props}
                 />
-            </div>
-
-            <InteractionButton state={state} />
-        </VStack>
+            }
+            buttonInteraction={<InteractionButton state={state} />}
+        />
     );
 };

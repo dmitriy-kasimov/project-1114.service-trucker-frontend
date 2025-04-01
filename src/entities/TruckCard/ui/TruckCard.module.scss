@@ -1,17 +1,11 @@
-.imgWrapper{
-    overflow: hidden;
-    border-radius: 12px;
-    display: flex;
+.img {
+    width: 240px;
+    height: 120px;
 
-    .img {
-        width: 240px;
-        height: 120px;
+    transition: all 0.3s ease-in-out;
 
-        transition: all 0.3s ease-in-out;
-
-        cursor: pointer;
-        &:hover{
-            transform: scale(1.1);
-        }
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
     }
 }

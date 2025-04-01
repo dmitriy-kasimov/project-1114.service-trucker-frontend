@@ -29,16 +29,28 @@ export const TestWidget: FC = () => {
                             needCash: 0,
                         }}
                     />
-                    <TruckCard
-                        id={'elem3'}
-                        model={TruckModels.Phantom}
-                        state={{
-                            explored: true,
-                            bought: false,
-                            priceCash: 1010,
-                            needCash: 10,
-                        }}
-                    />
+                    <HStack gap={'xl'}>
+                        <TruckCard
+                            id={'elem3'}
+                            model={TruckModels.Phantom}
+                            state={{
+                                explored: true,
+                                bought: false,
+                                priceCash: 1010,
+                                needCash: 10,
+                            }}
+                        />
+                        <TruckCard
+                            id={'elem4'}
+                            model={TruckModels.Phantom2}
+                            state={{
+                                explored: false,
+                                bought: false,
+                                priceScore: 100,
+                                needScore: 100,
+                            }}
+                        />
+                    </HStack>
                 </VStack>
 
                 <Xarrow
@@ -50,6 +62,12 @@ export const TestWidget: FC = () => {
                 <Xarrow
                     start={'elem1'} //can be react ref
                     end="elem3" //or an id
+                    color={'red'}
+                    strokeWidth={1}
+                />
+                <Xarrow
+                    start={'elem3'} //can be react ref
+                    end="elem4" //or an id
                     color={'red'}
                     strokeWidth={1}
                 />
