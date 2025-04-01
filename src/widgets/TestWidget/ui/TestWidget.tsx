@@ -12,10 +12,10 @@ export const TestWidget: FC = () => {
                     id={'elem1'}
                     model={TruckModels.Frightliner}
                     state={{
-                        canBuy: false,
-                        canExplore: false,
                         explored: true,
-                        bought: false,
+                        bought: true,
+                        canSale: false,
+                        priceCashForSale: 100500,
                     }}
                 />
                 <VStack gap={'xl'}>
@@ -23,20 +23,20 @@ export const TestWidget: FC = () => {
                         id={'elem2'}
                         model={TruckModels.Hauler}
                         state={{
-                            canBuy: false,
-                            canExplore: false,
                             explored: true,
                             bought: false,
+                            priceCash: 1000,
+                            needCash: 0,
                         }}
                     />
                     <TruckCard
                         id={'elem3'}
                         model={TruckModels.Phantom}
                         state={{
-                            canBuy: false,
-                            canExplore: false,
                             explored: true,
                             bought: false,
+                            priceCash: 1010,
+                            needCash: 10,
                         }}
                     />
                 </VStack>

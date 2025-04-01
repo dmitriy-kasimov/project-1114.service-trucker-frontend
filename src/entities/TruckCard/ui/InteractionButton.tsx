@@ -12,28 +12,46 @@ export const InteractionButton: FC<InteractionButtonProps> = ({ state }) => {
     const notBought = !state.bought;
 
     if (notExplored) {
-        const cantExplore = !state.canExplore;
+        const cantExplore = Boolean(state.needScore);
         if (cantExplore)
             return (
                 <Tooltip
-                    content={<Text color={'error'}>Не хватает опыта</Text>}
+                    content={
+                        <Text color={'error'}>
+                            Не хватает {state.needScore} опыта
+                        </Text>
+                    }
                 >
-                    <Button fullWidth>Can't explore</Button>
+                    <Button fullWidth>Открыть за {state.priceScore}</Button>
                 </Tooltip>
             );
-        return <Button fullWidth>Explore</Button>;
+        return <Button fullWidth>Открыть за {state.priceScore}</Button>;
     }
     if (notBought) {
-        const cantBuy = !state.canBuy;
+        const cantBuy = Boolean(state.needCash);
         if (cantBuy)
             return (
                 <Tooltip
-                    content={<Text color={'error'}>Не хватает денег</Text>}
+                    content={
+                        <Text color={'error'}>
+                            Не хватает {state.needCash} денег
+                        </Text>
+                    }
                 >
-                    <Button fullWidth>Can't buy</Button>
+                    <Button fullWidth>Приобрести за {state.priceCash}</Button>
                 </Tooltip>
             );
-        return <Button fullWidth>Buy</Button>;
+        return <Button fullWidth>Приобрести за {state.priceCash}</Button>;
     }
-    return <Button fullWidth>Sale</Button>;
+
+    const cantSale = !state.canSale;
+    if (cantSale)
+        return (
+            <Tooltip
+                content={<Text color={'error'}>Ты не можешь его продать</Text>}
+            >
+                <Button fullWidth>Продать за {state.priceCashForSale}</Button>
+            </Tooltip>
+        );
+    return <Button fullWidth>Продать за {state.priceCashForSale}</Button>;
 };

@@ -14,7 +14,9 @@ interface ITruckCard extends HTMLAttributes<HTMLDivElement> {
 export const TruckCard: FC<ITruckCard> = ({ model, state, ...props }) => {
     return (
         <VStack gap={'xs'}>
-            <Text color={'secondary'}>{TruckInfo[model].name}</Text>
+            <Text color={'secondary'} size={'l'}>
+                {TruckInfo[model].name}
+            </Text>
 
             <div className={cls.imgWrapper}>
                 <img
