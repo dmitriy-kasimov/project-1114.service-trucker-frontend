@@ -4,7 +4,7 @@ import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
 import cls from './TruckCard.module.scss';
-import { TTruckState } from '@/entities/TruckCard/model/types/TTruckState.ts';
+import { TTruckState } from '@/shared/types/TTruckState.ts';
 import { InteractionButton } from '@/entities/TruckCard/ui/InteractionButton.tsx';
 import { EntityCard } from '@/shared/components/EntityCard';
 
