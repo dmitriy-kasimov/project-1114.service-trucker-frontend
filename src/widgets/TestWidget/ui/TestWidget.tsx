@@ -47,7 +47,7 @@ export const TestWidget: FC = () => {
                                 explored: false,
                                 bought: false,
                                 priceScore: 100,
-                                needScore: 100,
+                                needScore: 0,
                             }}
                         />
                     </HStack>

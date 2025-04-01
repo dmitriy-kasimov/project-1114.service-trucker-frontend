@@ -1,12 +1,18 @@
 import { FC } from 'react';
 import { TTruckState } from '../model/types/TTruckState.ts';
 import { Button, Tooltip, Text } from '@project-1114/ui-kit';
+import { TruckExplore } from '@/features/TruckExplore';
+import { TruckModels } from '@/shared/const/TruckModels.ts';
 
 type InteractionButtonProps = {
+    model: TruckModels;
     state: TTruckState;
 };
 
-export const InteractionButton: FC<InteractionButtonProps> = ({ state }) => {
+export const InteractionButton: FC<InteractionButtonProps> = ({
+    model,
+    state,
+}) => {
     const notExplored = !state.explored;
 
     const notBought = !state.bought;
@@ -25,7 +31,9 @@ export const InteractionButton: FC<InteractionButtonProps> = ({ state }) => {
                     <Button fullWidth>Открыть за {state.priceScore}</Button>
                 </Tooltip>
             );
-        return <Button fullWidth>Открыть за {state.priceScore}</Button>;
+        return (
+            <TruckExplore model={model} priceScore={state.priceScore || 0} />
+        );
     }
     if (notBought) {
         const cantBuy = Boolean(state.needCash);

@@ -29,7 +29,9 @@ export const TruckCard: FC<ITruckCard> = ({ model, state, ...props }) => {
                     {...props}
                 />
             }
-            buttonInteraction={<InteractionButton state={state} />}
+            buttonInteraction={
+                <InteractionButton model={model} state={state} />
+            }
         />
     );
 };
