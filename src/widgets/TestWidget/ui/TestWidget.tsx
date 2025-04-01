@@ -10,7 +10,7 @@ export const TestWidget: FC = () => {
             <HStack gap={'xl'}>
                 <TruckCard
                     id={'elem1'}
-                    model={TruckModels.Freightliner}
+                    model={TruckModels.Frightliner}
                     state={{
                         canBuy: false,
                         canExplore: false,

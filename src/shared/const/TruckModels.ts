@@ -1,5 +1,5 @@
 export enum TruckModels {
-    Freightliner,
+    Frightliner,
     Hauler,
     Hauler2,
     Phantom,
