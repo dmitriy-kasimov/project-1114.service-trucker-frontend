@@ -3,10 +3,12 @@ import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { Card } from '@project-1114/ui-kit';
 
 import cls from './TestWidget.module.scss';
-import { TreeTrucks } from '@/widgets/TreeTrucks';
-import { TTrucksTree } from '@/widgets/TreeTrucks/model/types/TTrucksTree.ts';
+import { TEntitiesTree } from '@/shared/components/EntitiesTree/model/types/TEntitiesTree.ts';
+import { TTruckState } from '@/shared/types/TTruckState.ts';
+import { EntitiesTree } from '@/shared/components/EntitiesTree/ui/EntitiesTree.tsx';
+import { TruckCard } from '@/entities/TruckCard';
 
-const trees: TTrucksTree[] = [
+const trees: TEntitiesTree<TruckModels, TTruckState>[] = [
     {
         model: TruckModels.Frightliner,
         state: {
@@ -52,7 +54,11 @@ const trees: TTrucksTree[] = [
 export const TestWidget: FC = () => {
     return (
         <Card className={cls.Card}>
-            <TreeTrucks trees={trees} />
+            <EntitiesTree
+                tries={trees}
+                //@ts-expect-error Пропы ставятся в getEntitiesTree
+                leaf={<TruckCard />}
+            />
         </Card>
     );
 };
