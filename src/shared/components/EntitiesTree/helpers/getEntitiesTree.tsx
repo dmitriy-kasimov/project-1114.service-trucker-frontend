@@ -1,9 +1,12 @@
 import { TEntitiesTree } from '@/shared/components/EntitiesTree/model/types/TEntitiesTree.ts';
 import { HStack, VStack } from '@project-1114/ui-kit';
 import { ArrowsParentToChildren } from '../ui/ArrowsParentToChildren.tsx';
-import { cloneElement } from 'react';
+import { cloneElement, ReactElement } from 'react';
 
-export function getEntitiesTree<T, K>(trees: TEntitiesTree<T, K>[], leaf: any) {
+export function getEntitiesTree<T, K>(
+    trees: TEntitiesTree<T, K>[],
+    leaf: ReactElement,
+) {
     return trees.map((tree) => {
         const props = {
             id: `${tree.model}`,

@@ -5,8 +5,8 @@ import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
 import cls from './TruckCard.module.scss';
 import { TTruckState } from '@/shared/types/TTruckState.ts';
-import { InteractionButton } from '@/entities/TruckCard/ui/InteractionButton.tsx';
 import { EntityCard } from '@/shared/components/EntityCard';
+import { TruckInteractionButton } from '@/entities/TruckCard';
 
 interface ITruckCard extends HTMLAttributes<HTMLDivElement> {
     model: TruckModels;
@@ -30,7 +30,7 @@ export const TruckCard: FC<ITruckCard> = ({ model, state, ...props }) => {
                 />
             }
             buttonInteraction={
-                <InteractionButton model={model} state={state} />
+                <TruckInteractionButton model={model} state={state} />
             }
         />
     );

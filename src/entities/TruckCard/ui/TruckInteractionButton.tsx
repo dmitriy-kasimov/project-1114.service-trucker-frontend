@@ -11,7 +11,7 @@ type InteractionButtonProps = {
     state: TTruckState;
 };
 
-export const InteractionButton: FC<InteractionButtonProps> = ({
+export const TruckInteractionButton: FC<InteractionButtonProps> = ({
     model,
     state,
 }) => {
