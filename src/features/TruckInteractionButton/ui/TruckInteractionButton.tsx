@@ -1,10 +1,11 @@
 import { FC } from 'react';
-import { TTruckState } from '../../../shared/types/TTruckState.ts';
+import { TTruckState } from '@/shared/types/TTruckState.ts';
 import { Button, Tooltip, Text } from '@project-1114/ui-kit';
-import { TruckExplore } from '@/features/TruckExplore';
+
 import { TruckModels } from '@/shared/const/TruckModels.ts';
-import { TruckBuy } from '@/features/TruckBuy';
-import { TruckSale } from '@/features/TruckSale';
+import { TruckExplore } from '@/features/TruckInteractionButton/TruckExplore';
+import { TruckBuy } from '@/features/TruckInteractionButton/TruckBuy';
+import { TruckSale } from '@/features/TruckInteractionButton/TruckSale';
 
 type InteractionButtonProps = {
     model: TruckModels;

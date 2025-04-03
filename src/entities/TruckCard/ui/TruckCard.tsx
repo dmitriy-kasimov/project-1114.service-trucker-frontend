@@ -1,19 +1,17 @@
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 import { Text } from '@project-1114/ui-kit';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
 import cls from './TruckCard.module.scss';
-import { TTruckState } from '@/shared/types/TTruckState.ts';
 import { EntityCard } from '@/shared/components/EntityCard';
-import { TruckInteractionButton } from '@/entities/TruckCard';
 
 interface ITruckCard {
     id: number;
     model: TruckModels;
-    state: TTruckState;
+    buttonInteraction?: ReactElement;
 }
-export const TruckCard: FC<ITruckCard> = ({ id, model, state }) => {
+export const TruckCard: FC<ITruckCard> = ({ id, model, buttonInteraction }) => {
     return (
         <EntityCard
             label={
@@ -30,9 +28,7 @@ export const TruckCard: FC<ITruckCard> = ({ id, model, state }) => {
                     className={cls.img}
                 />
             }
-            buttonInteraction={
-                <TruckInteractionButton model={model} state={state} />
-            }
+            buttonInteraction={buttonInteraction}
         />
     );
 };

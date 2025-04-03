@@ -5,7 +5,7 @@ import cls from './EntityCard.module.scss';
 type EntityCardProps = {
     label: ReactElement;
     img: ReactElement;
-    buttonInteraction: ReactElement;
+    buttonInteraction?: ReactElement;
 };
 
 export const EntityCard: FC<EntityCardProps> = ({

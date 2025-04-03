@@ -1,2 +1,1 @@
-export { TruckCard } from './ui/TruckCard';
-export { TruckInteractionButton } from './ui/TruckInteractionButton';
+export { TruckCard } from './ui/TruckCard.tsx';
