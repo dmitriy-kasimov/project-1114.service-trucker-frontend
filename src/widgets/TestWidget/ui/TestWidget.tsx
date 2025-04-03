@@ -5,8 +5,7 @@ import { Card } from '@project-1114/ui-kit';
 import cls from './TestWidget.module.scss';
 import { TEntitiesTree } from '@/shared/components/EntitiesTree/model/types/TEntitiesTree.ts';
 import { TTruckState } from '@/shared/types/TTruckState.ts';
-import { EntitiesTree } from '@/shared/components/EntitiesTree/ui/EntitiesTree.tsx';
-import { TruckCard } from '@/entities/TruckCard';
+import { TrucksTree } from '@/shared/components/TrucksTree';
 
 const trees: TEntitiesTree<TruckModels, TTruckState>[] = [
     {
@@ -54,11 +53,12 @@ const trees: TEntitiesTree<TruckModels, TTruckState>[] = [
 export const TestWidget: FC = () => {
     return (
         <Card className={cls.Card}>
-            <EntitiesTree
-                tries={trees}
-                //@ts-expect-error Пропы ставятся в getEntitiesTree
-                leaf={<TruckCard />}
-            />
+            <TrucksTree tree={trees} />
+            {/*<EntitiesTree*/}
+            {/*    tries={trees}*/}
+            {/*    //@ts-expect-error Пропы ставятся в getEntitiesTree*/}
+            {/*    leaf={<TruckCard />}*/}
+            {/*/>*/}
         </Card>
     );
 };

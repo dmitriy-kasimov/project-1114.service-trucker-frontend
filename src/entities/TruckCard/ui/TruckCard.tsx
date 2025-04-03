@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from 'react';
+import { FC } from 'react';
 import { Text } from '@project-1114/ui-kit';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckInfo } from '@/shared/const/TruckInfo.ts';
@@ -8,11 +8,12 @@ import { TTruckState } from '@/shared/types/TTruckState.ts';
 import { EntityCard } from '@/shared/components/EntityCard';
 import { TruckInteractionButton } from '@/entities/TruckCard';
 
-interface ITruckCard extends HTMLAttributes<HTMLDivElement> {
+interface ITruckCard {
+    id: number;
     model: TruckModels;
     state: TTruckState;
 }
-export const TruckCard: FC<ITruckCard> = ({ model, state, ...props }) => {
+export const TruckCard: FC<ITruckCard> = ({ id, model, state }) => {
     return (
         <EntityCard
             label={
@@ -22,11 +23,11 @@ export const TruckCard: FC<ITruckCard> = ({ model, state, ...props }) => {
             }
             img={
                 <img
+                    id={`${id}`}
                     src={TruckInfo[model].img}
                     alt={TruckInfo[model].name}
                     decoding={'async'}
                     className={cls.img}
-                    {...props}
                 />
             }
             buttonInteraction={
