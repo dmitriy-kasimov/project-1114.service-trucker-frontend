@@ -3,6 +3,7 @@ import { TTruckModuleState } from '@/widgets/TruckModulesTree/model/types/TTruck
 
 export type TTruckModulesTree = {
     model: TruckModuleModels;
+    name: string;
     state: TTruckModuleState;
-    children: TTruckModulesTree[];
+    children?: TTruckModulesTree[];
 };

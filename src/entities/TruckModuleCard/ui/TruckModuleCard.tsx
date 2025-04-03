@@ -5,7 +5,7 @@ import { Text } from '@project-1114/ui-kit';
 import { TruckModulesInfo } from '@/shared/const/TruckModulesInfo.tsx';
 
 type TruckModuleCardProps = {
-    id: number;
+    id: string;
     model: TruckModuleModels;
     name: string;
     buttonInteraction?: ReactElement;
@@ -24,7 +24,7 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
                     {name}
                 </Text>
             }
-            img={<div id={`${id}`}>{TruckModulesInfo[model].icon}</div>}
+            img={<div id={id}>{TruckModulesInfo[model].icon}</div>}
             buttonInteraction={buttonInteraction}
         />
     );
