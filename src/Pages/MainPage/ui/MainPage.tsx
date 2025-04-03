@@ -1,10 +1,9 @@
 import { FC } from 'react';
 import { TrucksTree } from '@/widgets/TrucksTree';
-import { TEntitiesTree } from '@/shared/components/EntitiesTree/model/types/TEntitiesTree.ts';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
-import { TTruckState } from '@/shared/types/TTruckState.ts';
+import { TTruckTree } from '@/widgets/TrucksTree/model/types/TTruckTree.ts';
 
-const tree: TEntitiesTree<TruckModels, TTruckState>[] = [
+const tree: TTruckTree[] = [
     {
         model: TruckModels.Frightliner,
         state: {
