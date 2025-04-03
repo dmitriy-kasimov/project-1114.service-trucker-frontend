@@ -5,7 +5,7 @@ import { ArrowsParentToChildren } from './ArrowsParentToChildren.tsx';
 
 export const getTruckModulesTree = (tree: TTruckModulesTree[]) => {
     return tree.map((node) => (
-        <HStack gap={'l'}>
+        <HStack gap={'xl'}>
             <TruckModuleCard
                 id={node.name}
                 model={node.model}

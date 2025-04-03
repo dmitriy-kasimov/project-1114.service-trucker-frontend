@@ -183,6 +183,12 @@ export const MainPage: FC = () => {
             <TruckModulesTree
                 model={TruckModels.Frightliner}
                 tree={modulesTree}
+                state={{
+                    explored: true,
+                    bought: true,
+                    canSale: true,
+                    priceCashForSale: 100500,
+                }}
             />
         </div>
     );
