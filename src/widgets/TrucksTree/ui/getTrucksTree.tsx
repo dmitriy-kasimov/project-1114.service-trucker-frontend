@@ -8,12 +8,14 @@ export const getTrucksTree = (tree: TTruckTree[]) => {
     return tree.map((node) => (
         <HStack gap={'xl'} key={node.model}>
             <TruckCard
+                name={node.name}
                 id={node.model}
                 model={node.model}
                 buttonInteraction={
                     <TruckInteractionButton
                         model={node.model}
                         state={node.state}
+                        name={node.name}
                     />
                 }
             />

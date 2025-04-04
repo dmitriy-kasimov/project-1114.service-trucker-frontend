@@ -10,11 +10,16 @@ import {
 import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
 type TruckSaleProps = {
+    name: string;
     model: TruckModels;
     priceCashForSale: number;
 };
 
-export const TruckSale: FC<TruckSaleProps> = ({ model, priceCashForSale }) => {
+export const TruckSale: FC<TruckSaleProps> = ({
+    name,
+    model,
+    priceCashForSale,
+}) => {
     const [modal, setModal] = useState(false);
 
     const handleBuyTruck = () => {
@@ -37,10 +42,10 @@ export const TruckSale: FC<TruckSaleProps> = ({ model, priceCashForSale }) => {
                 <HStack gap={'l'} align={'end'}>
                     <Text>Продать</Text>
                     <VStack>
-                        <Text size={'l'}>{TruckInfo[model].name}</Text>
+                        <Text size={'l'}>{name}</Text>
                         <img
                             src={TruckInfo[model].img}
-                            alt={TruckInfo[model].name}
+                            alt={name}
                             decoding={'async'}
                             style={{ width: 120, height: 60 }}
                         />

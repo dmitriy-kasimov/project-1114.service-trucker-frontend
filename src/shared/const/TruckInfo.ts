@@ -9,23 +9,18 @@ import Hauler2 from '@/shared/assets/Hauler2.png';
 
 export const TruckInfo: Record<TruckModels, TTruck> = {
     [TruckModels.Frightliner]: {
-        name: 'Frightliner',
         img: Frightliner,
     },
     [TruckModels.Hauler]: {
-        name: 'Hauler',
         img: Hauler,
     },
     [TruckModels.Hauler2]: {
-        name: 'Hauler 2',
         img: Hauler2,
     },
     [TruckModels.Phantom]: {
-        name: 'Phantom',
         img: Phantom,
     },
     [TruckModels.Phantom2]: {
-        name: 'Phantom 2',
         img: Phantom2,
     },
 };

@@ -8,22 +8,29 @@ import { EntityCard } from '@/shared/components/EntityCard';
 
 interface ITruckCard {
     id: number;
+    name: string;
     model: TruckModels;
     buttonInteraction?: ReactElement;
 }
-export const TruckCard: FC<ITruckCard> = ({ id, model, buttonInteraction }) => {
+export const TruckCard: FC<ITruckCard> = ({
+    name,
+    id,
+    model,
+    buttonInteraction,
+}) => {
+    console.log(name);
     return (
         <EntityCard
             label={
                 <Text color={'secondary'} size={'l'}>
-                    {TruckInfo[model].name}
+                    {name}
                 </Text>
             }
             img={
                 <img
                     id={`${id}`}
                     src={TruckInfo[model].img}
-                    alt={TruckInfo[model].name}
+                    alt={name}
                     decoding={'async'}
                     className={cls.img}
                 />

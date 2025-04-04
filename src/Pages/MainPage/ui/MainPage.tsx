@@ -5,6 +5,7 @@ import { TTruckTree } from '@/widgets/TrucksTree/model/types/TTruckTree.ts';
 
 const tree: TTruckTree[] = [
     {
+        name: 'Frightliner',
         model: TruckModels.Frightliner,
         state: {
             explored: true,
@@ -14,6 +15,7 @@ const tree: TTruckTree[] = [
         },
         children: [
             {
+                name: 'Hauler',
                 model: TruckModels.Hauler,
                 state: {
                     explored: true,
@@ -23,6 +25,7 @@ const tree: TTruckTree[] = [
                 },
             },
             {
+                name: 'Phantom',
                 model: TruckModels.Phantom,
                 state: {
                     explored: true,
@@ -32,6 +35,7 @@ const tree: TTruckTree[] = [
                 },
                 children: [
                     {
+                        name: 'Phantom 2',
                         model: TruckModels.Phantom2,
                         state: {
                             explored: false,

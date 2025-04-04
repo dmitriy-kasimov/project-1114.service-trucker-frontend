@@ -10,11 +10,16 @@ import {
 import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
 type TruckExploreProps = {
+    name: string;
     model: TruckModels;
     priceScore: number;
 };
 
-export const TruckExplore: FC<TruckExploreProps> = ({ model, priceScore }) => {
+export const TruckExplore: FC<TruckExploreProps> = ({
+    name,
+    model,
+    priceScore,
+}) => {
     const [modal, setModal] = useState(false);
 
     const handleExploreTruck = () => {
@@ -37,10 +42,10 @@ export const TruckExplore: FC<TruckExploreProps> = ({ model, priceScore }) => {
                 <HStack gap={'l'} align={'end'}>
                     <Text>Открыть</Text>
                     <VStack>
-                        <Text size={'l'}>{TruckInfo[model].name}</Text>
+                        <Text size={'l'}>{name}</Text>
                         <img
                             src={TruckInfo[model].img}
-                            alt={TruckInfo[model].name}
+                            alt={name}
                             decoding={'async'}
                             style={{ width: 120, height: 60 }}
                         />

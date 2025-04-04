@@ -8,11 +8,13 @@ import { TruckBuy } from '@/features/TruckInteractionButton/TruckBuy';
 import { TruckSale } from '@/features/TruckInteractionButton/TruckSale';
 
 type InteractionButtonProps = {
+    name: string;
     model: TruckModels;
     state: TTruckState;
 };
 
 export const TruckInteractionButton: FC<InteractionButtonProps> = ({
+    name,
     model,
     state,
 }) => {
@@ -37,7 +39,11 @@ export const TruckInteractionButton: FC<InteractionButtonProps> = ({
                 </Tooltip>
             );
         return (
-            <TruckExplore model={model} priceScore={state.priceScore || 0} />
+            <TruckExplore
+                model={model}
+                priceScore={state.priceScore || 0}
+                name={name}
+            />
         );
     }
     if (notBought) {
@@ -56,7 +62,13 @@ export const TruckInteractionButton: FC<InteractionButtonProps> = ({
                     </Button>
                 </Tooltip>
             );
-        return <TruckBuy model={model} priceCash={state.priceCash || 0} />;
+        return (
+            <TruckBuy
+                model={model}
+                priceCash={state.priceCash || 0}
+                name={name}
+            />
+        );
     }
 
     const cantSale = !state.canSale;
@@ -74,6 +86,7 @@ export const TruckInteractionButton: FC<InteractionButtonProps> = ({
         <TruckSale
             model={model}
             priceCashForSale={state.priceCashForSale || 0}
+            name={name}
         />
     );
 };

@@ -133,6 +133,7 @@ const modulesTree: TTruckModulesTree[] = [
 export const TruckModulesPage: FC = () => {
     return (
         <TruckModulesTree
+            name={'Frightliner'}
             model={TruckModels.Frightliner}
             tree={modulesTree}
             state={{
