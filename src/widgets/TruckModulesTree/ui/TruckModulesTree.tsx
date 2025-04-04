@@ -23,7 +23,10 @@ export const TruckModulesTree: FC<TruckModulesTreeProps> = ({
 }) => {
     return (
         <Card style={{ background: 'Navy' }}>
-            <HStack align={'center'} gap={'xl'}>
+            <VStack align={'center'} gap={'xl'}>
+                <HStack gap={'xl'} align={'end'}>
+                    {getTruckModulesTree(tree)}
+                </HStack>
                 <TruckCard
                     id={228}
                     name={name}
@@ -36,7 +39,6 @@ export const TruckModulesTree: FC<TruckModulesTreeProps> = ({
                         />
                     }
                 />
-                <VStack gap={'xs'}>{getTruckModulesTree(tree)}</VStack>
                 {tree.map((module) => (
                     <Xarrow
                         key={`${name}->${module.name}`}
@@ -44,11 +46,11 @@ export const TruckModulesTree: FC<TruckModulesTreeProps> = ({
                         end={`${module.name}`} //or an id
                         color={'white'}
                         strokeWidth={2}
-                        startAnchor={'right'}
-                        endAnchor={'left'}
+                        startAnchor={'top'}
+                        endAnchor={'bottom'}
                     />
                 ))}
-            </HStack>
+            </VStack>
         </Card>
     );
 };

@@ -15,6 +15,8 @@ export function ArrowsParentToChildren(props: ArrowsParentToChildrenProps) {
             end={`${childTree.model}`} //or an id
             color={'white'}
             strokeWidth={2}
+            startAnchor={'top'}
+            endAnchor={'bottom'}
         />
     ));
 }

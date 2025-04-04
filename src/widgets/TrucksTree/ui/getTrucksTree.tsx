@@ -6,7 +6,13 @@ import { UnlockedTruckButton } from '@/features/UnlockedTruckButton';
 
 export const getTrucksTree = (tree: TTruckTree[]) => {
     return tree.map((node) => (
-        <HStack gap={'xl'} key={node.model}>
+        <VStack gap={'xl'} key={node.model} align={'center'}>
+            {node.children ? (
+                <HStack gap={'l'} align={'end'}>
+                    {getTrucksTree(node.children)}
+                    <ArrowsParentToChildren tree={node} />
+                </HStack>
+            ) : null}
             <TruckCard
                 name={node.name}
                 id={node.model}
@@ -19,12 +25,6 @@ export const getTrucksTree = (tree: TTruckTree[]) => {
                     />
                 }
             />
-            {node.children ? (
-                <VStack gap={'l'}>
-                    {getTrucksTree(node.children)}
-                    <ArrowsParentToChildren tree={node} />
-                </VStack>
-            ) : null}
-        </HStack>
+        </VStack>
     ));
 };

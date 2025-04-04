@@ -6,7 +6,13 @@ import { TruckModuleButton } from '@/features/TruckModuleButton';
 
 export const getTruckModulesTree = (tree: TTruckModulesTree[]) => {
     return tree.map((node) => (
-        <HStack gap={'xl'}>
+        <VStack gap={'xl'} align={'center'}>
+            {node.children ? (
+                <HStack gap={'m'} align={'end'}>
+                    {getTruckModulesTree(node.children)}
+                    <ArrowsParentToChildren tree={node} />
+                </HStack>
+            ) : null}
             <TruckModuleCard
                 id={node.name}
                 model={node.model}
@@ -19,12 +25,6 @@ export const getTruckModulesTree = (tree: TTruckModulesTree[]) => {
                     />
                 }
             />
-            {node.children ? (
-                <VStack gap={'m'}>
-                    {getTruckModulesTree(node.children)}
-                    <ArrowsParentToChildren tree={node} />
-                </VStack>
-            ) : null}
-        </HStack>
+        </VStack>
     ));
 };
