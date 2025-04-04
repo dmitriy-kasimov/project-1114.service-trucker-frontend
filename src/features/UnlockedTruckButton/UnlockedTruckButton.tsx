@@ -3,9 +3,9 @@ import { TTruckState } from '@/shared/types/TTruckState.ts';
 import { Button, Tooltip, Text } from '@project-1114/ui-kit';
 
 import { TruckModels } from '@/shared/const/TruckModels.ts';
-import { TruckExplore } from '@/features/TruckInteractionButton/TruckExplore';
-import { TruckBuy } from '@/features/TruckInteractionButton/TruckBuy';
-import { TruckSale } from '@/features/TruckInteractionButton/TruckSale';
+import { Unlock } from './Unlock/Unlock.tsx';
+import { Buy } from './Buy/Buy.tsx';
+import { Sale } from './Sale/Sale.tsx';
 
 type InteractionButtonProps = {
     name: string;
@@ -13,7 +13,7 @@ type InteractionButtonProps = {
     state: TTruckState;
 };
 
-export const TruckInteractionButton: FC<InteractionButtonProps> = ({
+export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
     name,
     model,
     state,
@@ -39,7 +39,7 @@ export const TruckInteractionButton: FC<InteractionButtonProps> = ({
                 </Tooltip>
             );
         return (
-            <TruckExplore
+            <Unlock
                 model={model}
                 priceScore={state.priceScore || 0}
                 name={name}
@@ -63,11 +63,7 @@ export const TruckInteractionButton: FC<InteractionButtonProps> = ({
                 </Tooltip>
             );
         return (
-            <TruckBuy
-                model={model}
-                priceCash={state.priceCash || 0}
-                name={name}
-            />
+            <Buy model={model} priceCash={state.priceCash || 0} name={name} />
         );
     }
 
@@ -83,7 +79,7 @@ export const TruckInteractionButton: FC<InteractionButtonProps> = ({
             </Tooltip>
         );
     return (
-        <TruckSale
+        <Sale
             model={model}
             priceCashForSale={state.priceCashForSale || 0}
             name={name}

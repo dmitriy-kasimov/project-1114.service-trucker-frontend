@@ -50,7 +50,7 @@ const tree: TTruckTree[] = [
     },
 ];
 
-export const MainPage: FC = () => {
+export const UnlockedVansPage: FC = () => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
             <TrucksTree tree={tree} />

@@ -4,9 +4,9 @@ import { Card, HStack, VStack } from '@project-1114/ui-kit';
 import { getTruckModulesTree } from '@/widgets/TruckModulesTree/ui/getTruckModulesTree.tsx';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckCard } from '@/entities/TruckCard';
-import { TruckInteractionButton } from '@/features/TruckInteractionButton';
 import { TTruckState } from '@/shared/types/TTruckState.ts';
 import Xarrow from 'react-xarrows';
+import { UnlockedTruckButton } from '@/features/UnlockedTruckButton';
 
 type TruckModulesTreeProps = {
     name: string;
@@ -29,7 +29,7 @@ export const TruckModulesTree: FC<TruckModulesTreeProps> = ({
                     name={name}
                     model={model}
                     buttonInteraction={
-                        <TruckInteractionButton
+                        <UnlockedTruckButton
                             model={model}
                             state={state}
                             name={name}

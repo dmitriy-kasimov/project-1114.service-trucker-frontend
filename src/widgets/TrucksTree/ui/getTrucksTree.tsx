@@ -2,7 +2,7 @@ import { TTruckTree } from '../model/types/TTruckTree.ts';
 import { HStack, VStack } from '@project-1114/ui-kit';
 import { ArrowsParentToChildren } from './ArrowsParentToChildren.tsx';
 import { TruckCard } from '@/entities/TruckCard';
-import { TruckInteractionButton } from '@/features/TruckInteractionButton';
+import { UnlockedTruckButton } from '@/features/UnlockedTruckButton';
 
 export const getTrucksTree = (tree: TTruckTree[]) => {
     return tree.map((node) => (
@@ -12,7 +12,7 @@ export const getTrucksTree = (tree: TTruckTree[]) => {
                 id={node.model}
                 model={node.model}
                 buttonInteraction={
-                    <TruckInteractionButton
+                    <UnlockedTruckButton
                         model={node.model}
                         state={node.state}
                         name={node.name}

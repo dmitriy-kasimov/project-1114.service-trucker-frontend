@@ -15,11 +15,7 @@ type TruckSaleProps = {
     priceCashForSale: number;
 };
 
-export const TruckSale: FC<TruckSaleProps> = ({
-    name,
-    model,
-    priceCashForSale,
-}) => {
+export const Sale: FC<TruckSaleProps> = ({ name, model, priceCashForSale }) => {
     const [modal, setModal] = useState(false);
 
     const handleBuyTruck = () => {

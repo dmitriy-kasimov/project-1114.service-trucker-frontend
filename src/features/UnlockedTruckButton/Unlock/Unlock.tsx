@@ -15,11 +15,7 @@ type TruckExploreProps = {
     priceScore: number;
 };
 
-export const TruckExplore: FC<TruckExploreProps> = ({
-    name,
-    model,
-    priceScore,
-}) => {
+export const Unlock: FC<TruckExploreProps> = ({ name, model, priceScore }) => {
     const [modal, setModal] = useState(false);
 
     const handleExploreTruck = () => {
