@@ -22,7 +22,7 @@ export const TruckModulesTree: FC<TruckModulesTreeProps> = ({
     state,
 }) => {
     return (
-        <Card style={{ background: 'black' }}>
+        <Card style={{ background: 'Navy' }}>
             <HStack align={'center'} gap={'xl'}>
                 <TruckCard
                     id={228}

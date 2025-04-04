@@ -13,12 +13,12 @@ export const TruckModulesInfo: Record<TruckModuleModels, TTruckModule> = {
         icon: <Icon Svg={AxisIcon} width={60} height={60} stroke={'white'} />,
     },
     [TruckModuleModels.Engine]: {
-        icon: <Icon Svg={EngineIcon} width={60} height={60} />,
+        icon: <Icon Svg={EngineIcon} width={65} height={65} />,
     },
     [TruckModuleModels.FuelTank]: {
-        icon: <Icon Svg={FuelTankIcon} width={60} height={60} />,
+        icon: <Icon Svg={FuelTankIcon} width={50} height={50} />,
     },
     [TruckModuleModels.Battery]: {
-        icon: <Icon Svg={BatteryIcon} width={60} height={60} />,
+        icon: <Icon Svg={BatteryIcon} width={50} height={50} />,
     },
 };

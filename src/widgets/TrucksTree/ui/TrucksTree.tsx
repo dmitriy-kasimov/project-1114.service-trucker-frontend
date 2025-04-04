@@ -8,5 +8,5 @@ type TrucksTreeProps = {
 };
 
 export const TrucksTree: FC<TrucksTreeProps> = ({ tree }) => (
-    <Card style={{ background: 'black' }}>{getTrucksTree(tree)}</Card>
+    <Card style={{ background: 'Navy' }}>{getTrucksTree(tree)}</Card>
 );
