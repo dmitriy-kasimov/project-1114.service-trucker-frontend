@@ -19,8 +19,8 @@ const modulesTree: TTruckModulesTree[] = [
                 name: 'Battery 2',
                 model: TruckModuleModels.Battery,
                 state: {
-                    explored: false,
-                    bought: false,
+                    explored: true,
+                    bought: true,
                 },
             },
             {
@@ -50,7 +50,7 @@ const modulesTree: TTruckModulesTree[] = [
             explored: true,
             bought: true,
             canSale: false,
-            set: false,
+            set: true,
         },
         children: [
             {
@@ -78,7 +78,7 @@ const modulesTree: TTruckModulesTree[] = [
             explored: true,
             bought: true,
             canSale: false,
-            set: false,
+            set: true,
         },
         children: [
             {
@@ -116,7 +116,7 @@ const modulesTree: TTruckModulesTree[] = [
             explored: true,
             bought: true,
             canSale: false,
-            set: false,
+            set: true,
         },
         children: [
             {
