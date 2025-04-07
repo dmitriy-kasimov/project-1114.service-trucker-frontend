@@ -17,6 +17,7 @@ export function ArrowsParentToChildren(props: ArrowsParentToChildrenProps) {
             strokeWidth={2}
             startAnchor={'top'}
             endAnchor={'bottom'}
+            curveness={0}
         />
     ));
 }

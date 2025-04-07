@@ -1,5 +1,29 @@
-.imgWrapper{
-    overflow: hidden;
-    border-radius: 12px;
-    display: flex;
+.EntityCardWrapper{
+    padding: 0.5rem 0;
+
+    .EntityCard{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        overflow: hidden;
+        .Card{
+            display: flex;
+            justify-content: center;
+
+
+            .imgWrapper{
+                overflow: hidden;
+                border-radius: 12px;
+                display: flex;
+
+                transition: all 0.3s ease-in-out;
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+    }
 }
+

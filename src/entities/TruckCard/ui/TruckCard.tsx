@@ -1,5 +1,5 @@
 import { FC, ReactElement } from 'react';
-import { Card, Text } from '@project-1114/ui-kit';
+import { Text } from '@project-1114/ui-kit';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
@@ -19,23 +19,22 @@ export const TruckCard: FC<ITruckCard> = ({
     buttonInteraction,
 }) => {
     return (
-        <Card variant={'outlined'} id={`${id}`} contentMargin={'s'}>
-            <EntityCard
-                label={
-                    <Text color={'secondary'} size={'l'}>
-                        {name}
-                    </Text>
-                }
-                img={
-                    <img
-                        src={TruckInfo[model].img}
-                        alt={name}
-                        decoding={'async'}
-                        className={cls.img}
-                    />
-                }
-                buttonInteraction={buttonInteraction}
-            />
-        </Card>
+        <EntityCard
+            id={`${id}`}
+            label={
+                <Text color={'secondary'} size={'xl'}>
+                    {name}
+                </Text>
+            }
+            img={
+                <img
+                    src={TruckInfo[model].img}
+                    alt={name}
+                    decoding={'async'}
+                    className={cls.img}
+                />
+            }
+            buttonInteraction={buttonInteraction}
+        />
     );
 };

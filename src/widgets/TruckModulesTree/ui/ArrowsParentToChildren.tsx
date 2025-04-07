@@ -14,7 +14,8 @@ export function ArrowsParentToChildren(props: ArrowsParentToChildrenProps) {
             start={`${tree.name}`} //can be react ref
             end={`${childTree.name}`} //or an id
             color={'white'}
-            strokeWidth={2}
+            strokeWidth={1.5}
+            curveness={0}
         />
     ));
 }
