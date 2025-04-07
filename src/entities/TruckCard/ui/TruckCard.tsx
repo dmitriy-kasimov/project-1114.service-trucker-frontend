@@ -5,6 +5,7 @@ import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
 import cls from './TruckCard.module.scss';
 import { EntityCard } from '@/shared/components/EntityCard';
+import { TruckTooltip } from '@/entities/TruckCard/ui/TruckTooltip.tsx';
 
 interface ITruckCard {
     id: number;
@@ -35,6 +36,7 @@ export const TruckCard: FC<ITruckCard> = ({
                 />
             }
             buttonInteraction={buttonInteraction}
+            tooltip={<TruckTooltip name={name} model={model} />}
         />
     );
 };
