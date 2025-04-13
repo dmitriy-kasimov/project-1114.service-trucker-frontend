@@ -10,8 +10,12 @@ type TooltipProps = {
 export const TruckTooltip: FC<TooltipProps> = ({ name, model }) => {
     return (
         <VStack gap={'s'}>
-            <Text color={'secondary'}>Название: {name}</Text>
-            <Text color={'secondary'}>Описание: много текста и все такое</Text>
+            <Text whiteSpace={'nowrap'} color={'secondary'}>
+                Название: {name}
+            </Text>
+            <Text whiteSpace={'nowrap'} color={'secondary'}>
+                Описание: много текста и все такое
+            </Text>
         </VStack>
     );
 };
