@@ -3,6 +3,8 @@ import { TrucksTree } from '@/widgets/TrucksTree';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TTruckTree } from '@/widgets/TrucksTree/model/types/TTruckTree.ts';
 
+import { Modal } from '@project-1114/ui-kit';
+
 const tree: TTruckTree[] = [
     {
         name: 'Frightliner',
@@ -52,8 +54,10 @@ const tree: TTruckTree[] = [
 
 export const UnlockedVansPage: FC = () => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
-            <TrucksTree tree={tree} />
-        </div>
+        <Modal isOpen={true} closable={true} fullscreen>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+                <TrucksTree tree={tree} />
+            </div>
+        </Modal>
     );
 };

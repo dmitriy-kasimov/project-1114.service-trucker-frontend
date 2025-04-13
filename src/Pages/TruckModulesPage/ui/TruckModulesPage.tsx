@@ -3,6 +3,7 @@ import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckModulesTree } from '@/widgets/TruckModulesTree';
 import { TTruckModulesTree } from '@/widgets/TruckModulesTree/model/types/TTruckModulesTree.ts';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
+import { Modal } from '@project-1114/ui-kit';
 
 const modulesTree: TTruckModulesTree[] = [
     {
@@ -132,16 +133,18 @@ const modulesTree: TTruckModulesTree[] = [
 ];
 export const TruckModulesPage: FC = () => {
     return (
-        <TruckModulesTree
-            name={'Frightliner'}
-            model={TruckModels.Frightliner}
-            tree={modulesTree}
-            state={{
-                explored: true,
-                bought: true,
-                canSale: true,
-                priceCashForSale: 100500,
-            }}
-        />
+        <Modal isOpen={true} fullscreen>
+            <TruckModulesTree
+                name={'Frightliner'}
+                model={TruckModels.Frightliner}
+                tree={modulesTree}
+                state={{
+                    explored: true,
+                    bought: true,
+                    canSale: true,
+                    priceCashForSale: 100500,
+                }}
+            />
+        </Modal>
     );
 };
