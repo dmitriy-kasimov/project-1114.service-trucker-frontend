@@ -33,7 +33,7 @@ export const TruckModuleButton: FC<TruckModuleButtonProps> = ({
                         </Text>
                     }
                 >
-                    <Button paddingV={'xs'} disabled fullWidth>
+                    <Button disabled fullWidth>
                         Открыть за {state.priceScore}
                     </Button>
                 </Tooltip>
