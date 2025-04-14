@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { TrucksTree } from '@/widgets/TrucksTree';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TTruckTree } from '@/widgets/TrucksTree/model/types/TTruckTree.ts';
-import { Window } from '@project-1114/ui-kit';
 
 const tree: TTruckTree[] = [
     {
@@ -52,9 +51,5 @@ const tree: TTruckTree[] = [
 ];
 
 export const UnlockedVansPage: FC = () => {
-    return (
-        <Window isOpen={true} fullscreen>
-            <TrucksTree tree={tree} />
-        </Window>
-    );
+    return <TrucksTree tree={tree} />;
 };

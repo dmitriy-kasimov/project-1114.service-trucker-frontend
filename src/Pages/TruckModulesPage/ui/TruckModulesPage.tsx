@@ -3,7 +3,6 @@ import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckModulesTree } from '@/widgets/TruckModulesTree';
 import { TTruckModulesTree } from '@/widgets/TruckModulesTree/model/types/TTruckModulesTree.ts';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
-import { Link, Sidebar, Window } from '@project-1114/ui-kit';
 
 const modulesTree: TTruckModulesTree[] = [
     {
@@ -133,24 +132,16 @@ const modulesTree: TTruckModulesTree[] = [
 ];
 export const TruckModulesPage: FC = () => {
     return (
-        <Window
-            isOpen={true}
-            fullscreen
-            sidebar={
-                <Sidebar items={[<Link>Vans</Link>, <Link>Trucks</Link>]} />
-            }
-        >
-            <TruckModulesTree
-                name={'Frightliner'}
-                model={TruckModels.Frightliner}
-                tree={modulesTree}
-                state={{
-                    explored: true,
-                    bought: true,
-                    canSale: true,
-                    priceCashForSale: 100500,
-                }}
-            />
-        </Window>
+        <TruckModulesTree
+            name={'Frightliner'}
+            model={TruckModels.Frightliner}
+            tree={modulesTree}
+            state={{
+                explored: true,
+                bought: true,
+                canSale: true,
+                priceCashForSale: 100500,
+            }}
+        />
     );
 };
