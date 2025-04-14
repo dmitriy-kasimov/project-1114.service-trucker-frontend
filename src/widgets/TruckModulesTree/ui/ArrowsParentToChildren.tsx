@@ -15,6 +15,7 @@ export function ArrowsParentToChildren(props: ArrowsParentToChildrenProps) {
             end={`${childTree.name}`} //or an id
             color={'white'}
             strokeWidth={1.5}
+            curveness={0}
         />
     ));
 }

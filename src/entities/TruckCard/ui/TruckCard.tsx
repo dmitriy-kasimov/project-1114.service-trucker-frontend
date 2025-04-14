@@ -27,7 +27,12 @@ export const TruckCard: FC<ITruckCard> = ({
                     {name}
                 </Text>
 
-                <Card padding={'0'} className={cls.Card} variant={'outlined'}>
+                <Card
+                    padding={'0'}
+                    className={cls.Card}
+                    variant={'outlined'}
+                    style={{ border: 'none' }}
+                >
                     <div className={cls.imgWrapper}>
                         <img
                             src={TruckInfo[model].img}

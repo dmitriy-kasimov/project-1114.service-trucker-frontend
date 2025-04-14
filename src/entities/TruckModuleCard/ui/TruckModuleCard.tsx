@@ -23,7 +23,12 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
             <div className={cls.EntityCard}>
                 {<Text size={'l'}>{name}</Text>}
 
-                <Card padding={'0'} className={cls.Card} variant={'outlined'}>
+                <Card
+                    padding={'0'}
+                    className={cls.Card}
+                    variant={'outlined'}
+                    style={{ border: 'none' }}
+                >
                     <div className={cls.imgWrapper}>
                         {TruckModulesInfo[model].icon}
                     </div>

@@ -23,7 +23,12 @@ export const TruckModulesTree: FC<TruckModulesTreeProps> = ({
     state,
 }) => {
     return (
-        <VStack align={'center'} gap={'xl'} className={cls.TruckModulesTree}>
+        <VStack
+            align={'center'}
+            gap={'xl'}
+            style={{ gap: '8rem' }}
+            className={cls.TruckModulesTree}
+        >
             <HStack gap={'xl'} align={'end'}>
                 {getTruckModulesTree(tree)}
             </HStack>
@@ -48,6 +53,7 @@ export const TruckModulesTree: FC<TruckModulesTreeProps> = ({
                     strokeWidth={2}
                     startAnchor={'top'}
                     endAnchor={'bottom'}
+                    curveness={0}
                 />
             ))}
         </VStack>
