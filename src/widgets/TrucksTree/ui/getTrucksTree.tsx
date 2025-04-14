@@ -6,7 +6,11 @@ import { UnlockedTruckButton } from '@/features/UnlockedTruckButton';
 
 export const getTrucksTree = (tree: TTruckTree[]) => {
     return tree.map((node) => (
-        <VStack gap={'xl'} key={node.model} align={'center'}>
+        <VStack
+            key={node.model}
+            align={'center'}
+            style={{ gap: '8rem', position: 'relative' }}
+        >
             {node.children ? (
                 <HStack gap={'l'} align={'end'}>
                     {getTrucksTree(node.children)}

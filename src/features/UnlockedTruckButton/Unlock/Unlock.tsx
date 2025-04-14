@@ -28,7 +28,7 @@ export const Unlock: FC<TruckExploreProps> = ({ name, model, priceScore }) => {
                 onClick={handleExploreTruck}
                 style={{ background: 'DarkGreen' }}
             >
-                Открыть за {priceScore}
+                <Text>Открыть за {priceScore}</Text>
             </Button>
             <ModalConfirm
                 isOpen={modal}

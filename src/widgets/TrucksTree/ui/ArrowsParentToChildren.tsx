@@ -7,7 +7,7 @@ type ArrowsParentToChildrenProps = {
 
 export function ArrowsParentToChildren(props: ArrowsParentToChildrenProps) {
     const { tree } = props;
-    console.log(tree);
+
     return tree.children?.map((childTree) => (
         <Xarrow
             key={`${tree.model}->${childTree.model}`}

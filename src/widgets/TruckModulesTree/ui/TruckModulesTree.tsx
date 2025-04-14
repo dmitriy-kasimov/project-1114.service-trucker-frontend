@@ -7,7 +7,6 @@ import { TruckCard } from '@/entities/TruckCard';
 import { TTruckState } from '@/shared/types/TTruckState.ts';
 import Xarrow from 'react-xarrows';
 import { UnlockedTruckButton } from '@/features/UnlockedTruckButton';
-import cls from './TruckModulesTree.module.scss';
 
 type TruckModulesTreeProps = {
     name: string;
@@ -26,8 +25,7 @@ export const TruckModulesTree: FC<TruckModulesTreeProps> = ({
         <VStack
             align={'center'}
             gap={'xl'}
-            style={{ gap: '8rem' }}
-            className={cls.TruckModulesTree}
+            style={{ gap: '8rem', position: 'relative' }}
         >
             <HStack gap={'xl'} align={'end'}>
                 {getTruckModulesTree(tree)}

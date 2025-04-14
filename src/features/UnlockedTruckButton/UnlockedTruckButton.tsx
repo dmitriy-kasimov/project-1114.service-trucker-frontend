@@ -34,7 +34,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
                     }
                 >
                     <Button disabled fullWidth>
-                        Открыть за {state.priceScore}
+                        <Text>Открыть за {state.priceScore}</Text>
                     </Button>
                 </Tooltip>
             );
@@ -58,7 +58,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
                     }
                 >
                     <Button disabled fullWidth>
-                        Приобрести за {state.priceCash}
+                        <Text>Приобрести за {state.priceCash}</Text>
                     </Button>
                 </Tooltip>
             );
@@ -74,7 +74,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
                 content={<Text color={'error'}>Ты не можешь его продать</Text>}
             >
                 <Button disabled fullWidth>
-                    Продать за {state.priceCashForSale}
+                    <Text> Продать за {state.priceCashForSale}</Text>
                 </Button>
             </Tooltip>
         );
