@@ -1,11 +1,11 @@
 import { VStack } from '@project-1114/ui-kit';
-import { UnlockedVansPage } from '@/Pages/UnlockedVansPage';
+import { TruckModulesPage } from '@/Pages/TruckModulesPage';
 
 export default function App() {
     return (
         <VStack gap={'xl'} max>
-            <UnlockedVansPage />
-            {/*<TruckModulesPage />*/}
+            {/*<UnlockedVansPage />*/}
+            <TruckModulesPage />
         </VStack>
     );
 }

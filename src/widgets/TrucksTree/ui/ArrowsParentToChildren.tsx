@@ -8,16 +8,23 @@ type ArrowsParentToChildrenProps = {
 export function ArrowsParentToChildren(props: ArrowsParentToChildrenProps) {
     const { tree } = props;
 
-    return tree.children?.map((childTree) => (
-        <Xarrow
-            key={`${tree.model}->${childTree.model}`}
-            start={`${tree.model}`} //can be react ref
-            end={`${childTree.model}`} //or an id
-            color={'white'}
-            strokeWidth={2}
-            startAnchor={'top'}
-            endAnchor={'bottom'}
-            curveness={0}
-        />
-    ));
+    return tree.children?.map((childTree) => {
+        console.log(tree.model);
+        console.log(document.getElementById(`${tree.model}`));
+        console.log(childTree.model);
+        console.log(document.getElementById(`${childTree.model}`));
+
+        return (
+            <Xarrow
+                key={`${tree.model}->${childTree.model}`}
+                start={`${tree.model}`} //can be react ref
+                end={`${childTree.model}`} //or an id
+                color={'white'}
+                strokeWidth={2}
+                startAnchor={'top'}
+                endAnchor={'bottom'}
+                curveness={0}
+            />
+        );
+    });
 }
