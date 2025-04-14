@@ -21,14 +21,15 @@
 
                 cursor: pointer;
                 &:hover{
-                    transform: scale(1.5);
+                    transform: scale(1.3);
                 }
             }
 
             .Info{
                 position: absolute;
-                top: 0.25rem;
+                top: 0.5rem;
                 right: 0.5rem;
+                cursor: help;
             }
         }
 

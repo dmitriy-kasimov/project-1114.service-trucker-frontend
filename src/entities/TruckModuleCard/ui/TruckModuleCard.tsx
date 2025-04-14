@@ -1,9 +1,10 @@
 import { FC, ReactElement } from 'react';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
-import { Card, Text, Tooltip } from '@project-1114/ui-kit';
+import { Card, Icon, Text, Tooltip } from '@project-1114/ui-kit';
 import { TruckModulesInfo } from '@/shared/const/TruckModulesInfo.tsx';
 import cls from './TruckModuleCard.module.scss';
-
+import InfoIcon from '@/shared/assets/icons/InfoIcon.svg?react';
+import { TruckModuleTooltip } from '@/entities/TruckModuleCard/ui/TruckModuleTooltip.tsx';
 type TruckModuleCardProps = {
     id: string;
     model: TruckModuleModels;
@@ -27,10 +28,16 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
                         {TruckModulesInfo[model].icon}
                     </div>
                     <div className={cls.Info}>
-                        <Tooltip content={<></>} direction={'bottom'}>
-                            <Text color={'main'} size={'l'} weight={'600'}>
-                                ?
-                            </Text>
+                        <Tooltip
+                            content={<TruckModuleTooltip name={name} />}
+                            direction={'bottom'}
+                        >
+                            <Icon
+                                Svg={InfoIcon}
+                                fill={'var(--color-accent)'}
+                                width={16}
+                                height={16}
+                            />
                         </Tooltip>
                     </div>
                 </Card>

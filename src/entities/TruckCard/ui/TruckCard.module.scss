@@ -15,12 +15,16 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+
             aspect-ratio: 1/1;
             width: 100%;
 
-
-            .img {
+            .imgWrapper{
+                border-radius: inherit;
+                overflow: hidden;
+                aspect-ratio: 1/1;
+                width: 100%;
+                .img {
                     height: 100%;
                     aspect-ratio: 1/1;
                     //width: 240px;
@@ -33,10 +37,14 @@
                         transform: scale(1.1);
                     }
                 }
+            }
+
+
             .Info{
                 position: absolute;
-                top: 0.25rem;
+                top: 0.5rem;
                 right: 0.5rem;
+                cursor: help;
             }
         }
 

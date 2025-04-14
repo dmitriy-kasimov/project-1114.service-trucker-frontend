@@ -1,10 +1,12 @@
 import { FC, ReactElement } from 'react';
-import { Card, Text, Tooltip } from '@project-1114/ui-kit';
+import { Card, Icon, Text, Tooltip } from '@project-1114/ui-kit';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
 import cls from './TruckCard.module.scss';
 import { TruckTooltip } from '@/entities/TruckCard/ui/TruckTooltip.tsx';
+
+import InfoIcon from '@/shared/assets/icons/InfoIcon.svg?react';
 
 interface ITruckCard {
     id: number;
@@ -26,20 +28,25 @@ export const TruckCard: FC<ITruckCard> = ({
                 </Text>
 
                 <Card padding={'0'} className={cls.Card} variant={'outlined'}>
-                    <img
-                        src={TruckInfo[model].img}
-                        alt={name}
-                        decoding={'async'}
-                        className={cls.img}
-                    />
+                    <div className={cls.imgWrapper}>
+                        <img
+                            src={TruckInfo[model].img}
+                            alt={name}
+                            decoding={'async'}
+                            className={cls.img}
+                        />
+                    </div>
                     <div className={cls.Info}>
                         <Tooltip
-                            content={<TruckTooltip name={name} model={model} />}
+                            content={<TruckTooltip name={name} />}
                             direction={'bottom'}
                         >
-                            <Text color={'main'} size={'l'} weight={'600'}>
-                                Info
-                            </Text>
+                            <Icon
+                                Svg={InfoIcon}
+                                fill={'var(--color-accent)'}
+                                width={32}
+                                height={32}
+                            />
                         </Tooltip>
                     </div>
                 </Card>
