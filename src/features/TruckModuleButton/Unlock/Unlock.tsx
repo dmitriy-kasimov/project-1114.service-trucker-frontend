@@ -1,13 +1,7 @@
 import { FC, useState } from 'react';
-import {
-    Button,
-    HStack,
-    ModalConfirm,
-    Text,
-    VStack,
-} from '@project-1114/ui-kit';
+import { Button, HStack, ModalConfirm, Text } from '@project-1114/ui-kit';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
-import { TruckModulesInfo } from '@/shared/const/TruckModulesInfo.tsx';
+import { TruckModuleCard } from '@/entities/TruckModuleCard/ui/TruckModuleCard.tsx';
 
 type UnlockProps = {
     name: string;
@@ -35,12 +29,9 @@ export const Unlock: FC<UnlockProps> = ({ name, model, priceScore }) => {
                 onClose={() => setModal(false)}
                 onConfirm={() => console.log('You unlocked the module')}
             >
-                <HStack gap={'l'} align={'end'}>
+                <HStack gap={'l'} align={'center'}>
                     <Text>Открыть</Text>
-                    <VStack>
-                        <Text size={'l'}>{name}</Text>
-                        {TruckModulesInfo[model].icon}
-                    </VStack>
+                    <TruckModuleCard id={''} model={model} name={name} />
                     <Text>за {priceScore} опыта?</Text>
                 </HStack>
             </ModalConfirm>
