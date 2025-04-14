@@ -22,7 +22,7 @@ export const Unlock: FC<UnlockProps> = ({ name, model, priceScore }) => {
                 onClick={handleUnlock}
                 style={{ background: 'DarkGreen' }}
             >
-                Открыть за {priceScore}
+                <Text>Открыть за {priceScore}</Text>
             </Button>
             <ModalConfirm
                 isOpen={modal}

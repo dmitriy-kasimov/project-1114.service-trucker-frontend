@@ -22,7 +22,7 @@ export const Buy: FC<BuyProps> = ({ name, model, priceCash }) => {
                 onClick={handleBuyModule}
                 style={{ background: 'DarkOrange' }}
             >
-                Купить за {priceCash}
+                <Text>Купить за {priceCash}</Text>
             </Button>
             <ModalConfirm
                 isOpen={modal}

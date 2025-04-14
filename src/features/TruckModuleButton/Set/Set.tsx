@@ -21,7 +21,7 @@ export const Set: FC<SetProps> = ({ name, model }) => {
                 onClick={handleSetModule}
                 style={{ background: 'MediumBlue' }}
             >
-                Установить
+                <Text align={'center'}>Установить</Text>
             </Button>
             <ModalConfirm
                 isOpen={modal}
