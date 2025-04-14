@@ -3,6 +3,8 @@
 
     .EntityCard{
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         gap: 0.5rem;
 
@@ -11,22 +13,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
             aspect-ratio: 1/1;
-            width: 100%;
+            width: 8rem;
 
             .imgWrapper{
-                border-radius: 12px;
-                display: flex;
-
                 transition: all 0.3s ease-in-out;
 
+                cursor: pointer;
                 &:hover{
-                    transform: scale(1.2);
+                    transform: scale(1.5);
                 }
-
-
             }
+
             .Info{
                 position: absolute;
                 top: 0.25rem;

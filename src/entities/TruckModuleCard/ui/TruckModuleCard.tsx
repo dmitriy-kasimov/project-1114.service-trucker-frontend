@@ -1,8 +1,8 @@
 import { FC, ReactElement } from 'react';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
-import { EntityCard } from '@/shared/components/EntityCard';
-import { Text } from '@project-1114/ui-kit';
+import { Card, Text, Tooltip } from '@project-1114/ui-kit';
 import { TruckModulesInfo } from '@/shared/const/TruckModulesInfo.tsx';
+import cls from './TruckModuleCard.module.scss';
 
 type TruckModuleCardProps = {
     id: string;
@@ -18,11 +18,25 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
     buttonInteraction,
 }) => {
     return (
-        <EntityCard
-            id={id}
-            label={<Text size={'l'}>{name}</Text>}
-            img={TruckModulesInfo[model].icon}
-            buttonInteraction={buttonInteraction}
-        />
+        <div id={id} className={cls.EntityCardWrapper}>
+            <div className={cls.EntityCard}>
+                {<Text size={'l'}>{name}</Text>}
+
+                <Card padding={'0'} className={cls.Card} variant={'outlined'}>
+                    <div className={cls.imgWrapper}>
+                        {TruckModulesInfo[model].icon}
+                    </div>
+                    <div className={cls.Info}>
+                        <Tooltip content={<></>} direction={'bottom'}>
+                            <Text color={'main'} size={'l'} weight={'600'}>
+                                ?
+                            </Text>
+                        </Tooltip>
+                    </div>
+                </Card>
+
+                {buttonInteraction}
+            </div>
+        </div>
     );
 };

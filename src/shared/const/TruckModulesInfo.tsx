@@ -10,15 +10,15 @@ import { Icon } from '@project-1114/ui-kit';
 
 export const TruckModulesInfo: Record<TruckModuleModels, TTruckModule> = {
     [TruckModuleModels.Axis]: {
-        icon: <Icon Svg={AxisIcon} width={60} height={60} stroke={'white'} />,
+        icon: <Icon Svg={AxisIcon} width={64} height={64} stroke={'white'} />,
     },
     [TruckModuleModels.Engine]: {
-        icon: <Icon Svg={EngineIcon} width={60} height={60} />,
+        icon: <Icon Svg={EngineIcon} width={64} height={64} />,
     },
     [TruckModuleModels.FuelTank]: {
-        icon: <Icon Svg={FuelTankIcon} width={60} height={60} />,
+        icon: <Icon Svg={FuelTankIcon} width={64} height={64} />,
     },
     [TruckModuleModels.Battery]: {
-        icon: <Icon Svg={BatteryIcon} width={60} height={60} />,
+        icon: <Icon Svg={BatteryIcon} width={64} height={64} />,
     },
 };

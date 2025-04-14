@@ -1,10 +1,9 @@
 import { FC, ReactElement } from 'react';
-import { Text } from '@project-1114/ui-kit';
+import { Card, Text, Tooltip } from '@project-1114/ui-kit';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
 import cls from './TruckCard.module.scss';
-import { EntityCard } from '@/shared/components/EntityCard';
 import { TruckTooltip } from '@/entities/TruckCard/ui/TruckTooltip.tsx';
 
 interface ITruckCard {
@@ -20,23 +19,32 @@ export const TruckCard: FC<ITruckCard> = ({
     buttonInteraction,
 }) => {
     return (
-        <EntityCard
-            id={`${id}`}
-            label={
+        <div id={`${id}`} className={cls.EntityCardWrapper}>
+            <div className={cls.EntityCard}>
                 <Text color={'secondary'} size={'xl'}>
                     {name}
                 </Text>
-            }
-            img={
-                <img
-                    src={TruckInfo[model].img}
-                    alt={name}
-                    decoding={'async'}
-                    className={cls.img}
-                />
-            }
-            buttonInteraction={buttonInteraction}
-            tooltip={<TruckTooltip name={name} model={model} />}
-        />
+
+                <Card padding={'0'} className={cls.Card} variant={'outlined'}>
+                    <img
+                        src={TruckInfo[model].img}
+                        alt={name}
+                        decoding={'async'}
+                        className={cls.img}
+                    />
+                    <div className={cls.Info}>
+                        <Tooltip
+                            content={<TruckTooltip name={name} model={model} />}
+                            direction={'bottom'}
+                        >
+                            <Text color={'main'} size={'l'} weight={'600'}>
+                                Info
+                            </Text>
+                        </Tooltip>
+                    </div>
+                </Card>
+                {buttonInteraction}
+            </div>
+        </div>
     );
 };
