@@ -7,18 +7,21 @@ import cls from './TruckCard.module.scss';
 import { TruckTooltip } from '@/entities/TruckCard/ui/TruckTooltip.tsx';
 
 import InfoIcon from '@/shared/assets/icons/InfoIcon.svg?react';
+import { Link } from 'react-router-dom';
 
 interface ITruckCard {
     id: number;
     name: string;
     model: TruckModels;
     buttonInteraction?: ReactElement;
+    link?: string;
 }
 export const TruckCard: FC<ITruckCard> = ({
     name,
     id,
     model,
     buttonInteraction,
+    link,
 }) => {
     return (
         <div id={`${id}`} className={cls.EntityCardWrapper}>
@@ -33,14 +36,28 @@ export const TruckCard: FC<ITruckCard> = ({
                     variant={'outlined'}
                     style={{ border: 'none' }}
                 >
-                    <div className={cls.imgWrapper}>
-                        <img
-                            src={TruckInfo[model].img}
-                            alt={name}
-                            decoding={'async'}
-                            className={cls.img}
-                        />
-                    </div>
+                    {link ? (
+                        <Link to={link}>
+                            <div className={cls.imgWrapper}>
+                                <img
+                                    src={TruckInfo[model].img}
+                                    alt={name}
+                                    decoding={'async'}
+                                    className={cls.img}
+                                />
+                            </div>
+                        </Link>
+                    ) : (
+                        <div className={cls.imgWrapper}>
+                            <img
+                                src={TruckInfo[model].img}
+                                alt={name}
+                                decoding={'async'}
+                                className={cls.img}
+                            />
+                        </div>
+                    )}
+
                     <div className={cls.Info}>
                         <Tooltip
                             content={<TruckTooltip name={name} />}

@@ -4,9 +4,11 @@ import {
     getRouteCisterns,
     getRouteDumpTrucks,
     getRouteHeavyTrucks,
+    getRouteTruckDetails,
     getRouteVans,
 } from '@/shared/const/router';
 import { UnlockedVansPage } from '@/Pages/UnlockedVansPage';
+import { TruckModulesPage } from '@/Pages/TruckModulesPage';
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
     [AppRoutes.VANS]: {
@@ -24,5 +26,9 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     [AppRoutes.CISTERNS]: {
         path: getRouteCisterns(),
         element: <UnlockedVansPage />,
+    },
+    [AppRoutes.TRUCK_DETAILS]: {
+        path: getRouteTruckDetails(':id'),
+        element: <TruckModulesPage />,
     },
 };

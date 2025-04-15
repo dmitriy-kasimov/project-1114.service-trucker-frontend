@@ -3,6 +3,7 @@ import { HStack, VStack } from '@project-1114/ui-kit';
 import { ArrowsParentToChildren } from './ArrowsParentToChildren.tsx';
 import { TruckCard } from '@/entities/TruckCard';
 import { UnlockedTruckButton } from '@/features/UnlockedTruckButton';
+import { getRouteTruckDetails } from '@/shared/const/router.ts';
 
 export const getTrucksTree = (tree: TTruckTree[]) => {
     return tree.map((node) => (
@@ -28,6 +29,7 @@ export const getTrucksTree = (tree: TTruckTree[]) => {
                         name={node.name}
                     />
                 }
+                link={getRouteTruckDetails(`${node.model}`)}
             />
         </VStack>
     ));
