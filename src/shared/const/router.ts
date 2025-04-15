@@ -5,7 +5,7 @@ export enum AppRoutes {
     CISTERNS,
 }
 
-export const getRouteVans = () => '*';
+export const getRouteVans = () => '/';
 export const getRouteDumpTrucks = () => '/dump-trucks';
 export const getRouteHeavyTrucks = () => '/heavy-trucks';
 export const getRouteCisterns = () => '/cisterns';
