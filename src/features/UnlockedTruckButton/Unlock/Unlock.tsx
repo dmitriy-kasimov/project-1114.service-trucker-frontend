@@ -1,13 +1,7 @@
 import { FC, useState } from 'react';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
-import {
-    Button,
-    HStack,
-    ModalConfirm,
-    Text,
-    VStack,
-} from '@project-1114/ui-kit';
-import { TruckInfo } from '@/shared/const/TruckInfo.ts';
+import { Button, HStack, ModalConfirm, Text } from '@project-1114/ui-kit';
+import { TruckCard } from '@/entities/TruckCard';
 
 type TruckExploreProps = {
     name: string;
@@ -31,17 +25,9 @@ export const Unlock: FC<TruckExploreProps> = ({ name, model, priceScore }) => {
                 onClose={() => setModal(false)}
                 onConfirm={() => console.log('You explored')}
             >
-                <HStack gap={'l'} align={'end'}>
+                <HStack gap={'l'} align={'center'}>
                     <Text>Открыть</Text>
-                    <VStack>
-                        <Text size={'l'}>{name}</Text>
-                        <img
-                            src={TruckInfo[model].img}
-                            alt={name}
-                            decoding={'async'}
-                            style={{ width: 120, height: 60 }}
-                        />
-                    </VStack>
+                    <TruckCard id={model} name={name} model={model} />
                     <Text>за {priceScore} опыта?</Text>
                 </HStack>
             </ModalConfirm>

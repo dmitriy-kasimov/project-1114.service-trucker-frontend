@@ -7,8 +7,8 @@ import {
     getRouteTruckDetails,
     getRouteVans,
 } from '@/shared/const/router';
-import { UnlockedVansPage } from '@/Pages/UnlockedVansPage';
-import { TruckModulesPage } from '@/Pages/TruckModulesPage';
+import { UnlockedVansPage } from '@/pages/UnlockedVansPage';
+import { TruckModulesPage } from '@/pages/TruckModulesPage';
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
     [AppRoutes.VANS]: {

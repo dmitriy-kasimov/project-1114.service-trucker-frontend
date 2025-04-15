@@ -13,7 +13,7 @@ export const getTrucksTree = (tree: TTruckTree[]) => {
             style={{ gap: '8rem', position: 'relative' }}
         >
             {node.children ? (
-                <HStack gap={'l'} align={'end'}>
+                <HStack align={'end'} style={{ gap: '8rem' }}>
                     {getTrucksTree(node.children)}
                     <ArrowsParentToChildren tree={node} />
                 </HStack>
