@@ -25,10 +25,15 @@
                 }
             }
 
+            .Name {
+                position: absolute;
+                bottom: 0.125rem;
+                left: 0.125rem;
+            }
             .Info{
                 position: absolute;
-                top: 0.5rem;
-                right: 0.5rem;
+                top: 0.125rem;
+                right: 0.125rem;
                 cursor: help;
             }
         }

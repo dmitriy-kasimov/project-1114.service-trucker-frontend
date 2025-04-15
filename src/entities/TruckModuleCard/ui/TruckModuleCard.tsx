@@ -21,12 +21,13 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
     return (
         <div id={id} className={cls.EntityCardWrapper}>
             <div className={cls.EntityCard}>
-                {<Text size={'l'}>{name}</Text>}
-
                 <Card padding={'0'} className={cls.Card}>
                     <div className={cls.imgWrapper}>
                         {TruckModulesInfo[model].icon}
                     </div>
+                    <Text color={'main'} weight={'600'} className={cls.Name}>
+                        {name}
+                    </Text>
                     <div className={cls.Info}>
                         <Tooltip
                             content={<TruckModuleTooltip name={name} />}

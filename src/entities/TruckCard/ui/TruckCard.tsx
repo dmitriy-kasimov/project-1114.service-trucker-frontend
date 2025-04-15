@@ -26,10 +26,6 @@ export const TruckCard: FC<ITruckCard> = ({
     return (
         <div id={`${id}`} className={cls.EntityCardWrapper}>
             <div className={cls.EntityCard}>
-                <Text color={'secondary'} size={'xl'}>
-                    {name}
-                </Text>
-
                 <Card
                     padding={'0'}
                     className={cls.Card}
@@ -56,7 +52,9 @@ export const TruckCard: FC<ITruckCard> = ({
                             />
                         </div>
                     )}
-
+                    <Text weight={'600'} size={'xl'} className={cls.Name}>
+                        {name}
+                    </Text>
                     <div className={cls.Info}>
                         <Tooltip
                             content={<TruckTooltip name={name} />}
