@@ -33,20 +33,19 @@ export const TruckCard: FC<ITruckCard> = ({
                 <Card
                     padding={'0'}
                     className={cls.Card}
-                    variant={'outlined'}
-                    style={{ border: 'none' }}
+                    variant={'transparent'}
                 >
                     {link ? (
-                        <Link to={link}>
-                            <div className={cls.imgWrapper}>
+                        <div className={cls.imgWrapper}>
+                            <Link to={link}>
                                 <img
                                     src={TruckInfo[model].img}
                                     alt={name}
                                     decoding={'async'}
                                     className={cls.img}
                                 />
-                            </div>
-                        </Link>
+                            </Link>
+                        </div>
                     ) : (
                         <div className={cls.imgWrapper}>
                             <img
