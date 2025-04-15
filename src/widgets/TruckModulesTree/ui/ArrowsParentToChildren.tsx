@@ -13,7 +13,7 @@ export function ArrowsParentToChildren(props: ArrowsParentToChildrenProps) {
             key={`${tree.name}->${childTree.name}`}
             start={`${tree.name}`} //can be react ref
             end={`${childTree.name}`} //or an id
-            color={'white'}
+            color={'var(--color-secondary)'}
             strokeWidth={1.5}
             curveness={0}
         />

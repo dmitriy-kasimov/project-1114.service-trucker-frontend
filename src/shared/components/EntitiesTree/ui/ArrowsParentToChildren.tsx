@@ -15,7 +15,7 @@ export function ArrowsParentToChildren<T, K>(
             key={`${tree.model}->${childTree.model}`}
             start={`${tree.model}`} //can be react ref
             end={`${childTree.model}`} //or an id
-            color={'white'}
+            color={'var(--color-secondary)'}
             strokeWidth={2}
         />
     ));

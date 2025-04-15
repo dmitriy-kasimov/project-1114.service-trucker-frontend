@@ -26,8 +26,7 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
                 <Card
                     padding={'0'}
                     className={cls.Card}
-                    variant={'outlined'}
-                    style={{ border: 'none' }}
+                    variant={'transparent'}
                 >
                     <div className={cls.imgWrapper}>
                         {TruckModulesInfo[model].icon}
