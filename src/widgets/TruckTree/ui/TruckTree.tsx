@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { TTruckTree } from '@/widgets/TruckTree/model/types/TTruckTree.ts';
 import { HStack, VStack } from '@project-1114/ui-kit';
-import { getTruckModulesTree } from '@/widgets/TruckTree/ui/getTruckModulesTree.tsx';
+import { getTruckTree } from '@/widgets/TruckTree/ui/getTruckTree.tsx';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckCard } from '@/entities/TruckCard';
 import { TTruckState } from '@/shared/types/TTruckState.ts';
@@ -28,7 +28,7 @@ export const TruckTree: FC<TruckModulesTreeProps> = ({
             style={{ gap: '8rem', position: 'relative' }}
         >
             <HStack gap={'xl'} align={'end'}>
-                {getTruckModulesTree(tree)}
+                {getTruckTree(tree)}
             </HStack>
             <TruckCard
                 id={228}
