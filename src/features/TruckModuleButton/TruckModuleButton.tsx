@@ -28,7 +28,7 @@ export const TruckModuleButton: FC<TruckModuleButtonProps> = ({
             return (
                 <Tooltip
                     content={
-                        <Text color={'error'}>
+                        <Text color={'error'} whiteSpace={'nowrap'}>
                             Не хватает {state.needScore} опыта
                         </Text>
                     }
@@ -52,7 +52,7 @@ export const TruckModuleButton: FC<TruckModuleButtonProps> = ({
             return (
                 <Tooltip
                     content={
-                        <Text color={'error'}>
+                        <Text color={'error'} whiteSpace={'nowrap'}>
                             Не хватает {state.needCash} денег
                         </Text>
                     }

@@ -45,7 +45,7 @@ const tree: TTrucksTree[] = [
                             unlocked: false,
                             bought: false,
                             priceScore: 100,
-                            needScore: 0,
+                            needScore: 1000,
                         },
                     },
                 ],

@@ -17,7 +17,9 @@
             align-items: center;
 
             width: 16rem;
-            height: 16rem;
+            max-height: 16rem;
+            height: 100%;
+            aspect-ratio: 1.25/1;
             .imgWrapper{
                 border-radius: inherit;
                 overflow: hidden;

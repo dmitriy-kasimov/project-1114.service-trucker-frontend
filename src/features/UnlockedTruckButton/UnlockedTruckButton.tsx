@@ -30,7 +30,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
             return (
                 <Tooltip
                     content={
-                        <Text color={'error'}>
+                        <Text color={'error'} whiteSpace={'nowrap'}>
                             Не хватает {state.needScore} опыта
                         </Text>
                     }
@@ -55,7 +55,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
             return (
                 <Tooltip
                     content={
-                        <Text color={'error'}>
+                        <Text color={'error'} whiteSpace={'nowrap'}>
                             Не хватает {state.needCash} денег
                         </Text>
                     }
