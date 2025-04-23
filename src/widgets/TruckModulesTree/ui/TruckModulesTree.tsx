@@ -51,7 +51,7 @@ export const TruckModulesTree: FC<TruckModulesTreeProps> = ({
                     strokeWidth={2}
                     startAnchor={'top'}
                     endAnchor={'bottom'}
-                    curveness={0}
+                    path={'grid'}
                 />
             ))}
         </VStack>

@@ -17,6 +17,7 @@ export function ArrowsParentToChildren<T, K>(
             end={`${childTree.model}`} //or an id
             color={'var(--color-secondary)'}
             strokeWidth={2}
+            path={'grid'}
         />
     ));
 }
