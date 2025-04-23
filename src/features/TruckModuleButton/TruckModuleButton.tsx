@@ -5,7 +5,7 @@ import { Unlock } from './Unlock/Unlock.tsx';
 import { Buy } from './Buy/Buy.tsx';
 import { Set } from './Set/Set.tsx';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
-import { TTruckModuleState } from '@/widgets/TruckTree/model/types/TTruckModuleState.ts';
+import { TTruckModuleState } from '@/entities/TruckModuleCard';
 
 type TruckModuleButtonProps = {
     name: string;

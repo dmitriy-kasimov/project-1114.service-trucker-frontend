@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { Button, HStack, ModalConfirm, Text } from '@project-1114/ui-kit';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
-import { TruckModuleCard } from '@/entities/TruckModuleCard/ui/TruckModuleCard.tsx';
+import { TruckModuleCard } from '@/entities/TruckModuleCard';
 
 type UnlockProps = {
     name: string;
