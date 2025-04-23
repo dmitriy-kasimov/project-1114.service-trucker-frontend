@@ -38,6 +38,16 @@ const modulesTree: TTruckTree[] = [
                             unlocked: false,
                             bought: false,
                         },
+                        child: {
+                            name: 'Phantom',
+                            model: TruckModels.Phantom,
+                            state: {
+                                unlocked: true,
+                                bought: false,
+                                priceCash: 1010,
+                                needCash: 0,
+                            },
+                        },
                     },
                 ],
             },
@@ -90,17 +100,27 @@ const modulesTree: TTruckTree[] = [
                 },
                 modules: [
                     {
-                        name: 'Fuel tank 3',
+                        name: 'Fuel tank 4',
                         model: TruckModuleModels.FuelTank,
                         state: {
                             unlocked: false,
                             bought: false,
                         },
+                        child: {
+                            name: 'Hauler',
+                            model: TruckModels.Hauler,
+                            state: {
+                                unlocked: true,
+                                bought: false,
+                                priceCash: 1000,
+                                needCash: 0,
+                            },
+                        },
                     },
                 ],
             },
             {
-                name: 'Fuel tank 4',
+                name: 'Fuel tank 3',
                 model: TruckModuleModels.FuelTank,
                 state: {
                     unlocked: false,

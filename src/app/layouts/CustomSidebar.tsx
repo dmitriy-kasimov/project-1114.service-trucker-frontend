@@ -18,7 +18,7 @@ export const CustomSidebar = () => {
     return (
         <Sidebar
             items={links.map((link) => (
-                <ULink>
+                <ULink key={link.label}>
                     <Link to={link.link}>
                         <Text whiteSpace={'nowrap'} color={'main'}>
                             {link.label}
