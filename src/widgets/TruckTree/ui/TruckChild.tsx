@@ -2,31 +2,39 @@ import { FC } from 'react';
 import { TruckCard } from '@/entities/TruckCard';
 import Xarrow from 'react-xarrows';
 import { TTruckTree } from '../model/types/TTruckTree';
+import { UnlockedTruckButton } from '@/features/UnlockedTruckButton';
+import { getRouteTruckDetails } from '@/shared/const/router.ts';
 
 type TruckChildProps = {
     node: TTruckTree;
 };
 
 export const TruckChild: FC<TruckChildProps> = ({ node }) => {
+    const truck = node.child;
+    if (!truck) return null;
     return (
         <>
-            {node.child ? (
-                <>
-                    <TruckCard
-                        id={node.child.model}
-                        model={node.child.model}
-                        name={node.child.name}
+            <TruckCard
+                id={truck.model}
+                model={truck.model}
+                name={truck.name}
+                buttonInteraction={
+                    <UnlockedTruckButton
+                        model={truck.model}
+                        name={truck.name}
+                        state={truck.state}
                     />
-                    <Xarrow
-                        key={`${node.name}->${node.child.name}`}
-                        start={`${node.name}`} //can be react ref
-                        end={`${node.child.model}`} //or an id
-                        color={'var(--color-secondary)'}
-                        strokeWidth={1.5}
-                        path={'grid'}
-                    />
-                </>
-            ) : null}
+                }
+                link={getRouteTruckDetails(`${truck.model}`)}
+            />
+            <Xarrow
+                key={`${node.name}->${truck.name}`}
+                start={`${node.name}`} //can be react ref
+                end={`${truck.model}`} //or an id
+                color={'var(--color-secondary)'}
+                strokeWidth={1.5}
+                path={'grid'}
+            />
         </>
     );
 };
