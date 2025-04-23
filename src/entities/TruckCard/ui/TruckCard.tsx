@@ -1,7 +1,13 @@
 import { FC, ReactElement } from 'react';
-import { Card, Icon, Text, Tooltip } from '@project-1114/ui-kit';
+import {
+    AppImage,
+    Card,
+    Icon,
+    Skeleton,
+    Text,
+    Tooltip,
+} from '@project-1114/ui-kit';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
-import { TruckInfo } from '@/shared/const/TruckInfo.ts';
 
 import cls from './TruckCard.module.scss';
 import { TruckTooltip } from '@/entities/TruckCard/ui/TruckTooltip.tsx';
@@ -15,13 +21,14 @@ interface ITruckCard {
     model: TruckModels;
     buttonInteraction?: ReactElement;
     link?: string;
+    img?: string;
 }
 export const TruckCard: FC<ITruckCard> = ({
     name,
     id,
-    model,
     buttonInteraction,
     link,
+    img,
 }) => {
     return (
         <div id={`${id}`} className={cls.EntityCardWrapper}>
@@ -34,8 +41,14 @@ export const TruckCard: FC<ITruckCard> = ({
                     {link ? (
                         <div className={cls.imgWrapper}>
                             <Link to={link}>
-                                <img
-                                    src={TruckInfo[model].img}
+                                <AppImage
+                                    fallback={
+                                        <Skeleton
+                                            width={'16rem'}
+                                            height={'16rem'}
+                                        />
+                                    }
+                                    src={img || ''}
                                     alt={name}
                                     decoding={'async'}
                                     className={cls.img}
@@ -44,8 +57,14 @@ export const TruckCard: FC<ITruckCard> = ({
                         </div>
                     ) : (
                         <div className={cls.imgWrapper}>
-                            <img
-                                src={TruckInfo[model].img}
+                            <AppImage
+                                fallback={
+                                    <Skeleton
+                                        width={'16rem'}
+                                        height={'16rem'}
+                                    />
+                                }
+                                src={img || ''}
                                 alt={name}
                                 decoding={'async'}
                                 className={cls.img}

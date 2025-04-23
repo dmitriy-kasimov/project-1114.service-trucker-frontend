@@ -21,12 +21,14 @@ export const getTrucksTree = (tree: TTrucksTree[]) => {
             <TruckCard
                 name={node.name}
                 id={node.model}
+                img={node.img}
                 model={node.model}
                 buttonInteraction={
                     <UnlockedTruckButton
                         model={node.model}
                         state={node.state}
                         name={node.name}
+                        img={node.img}
                     />
                 }
                 link={getRouteTruckDetails(`${node.model}`)}

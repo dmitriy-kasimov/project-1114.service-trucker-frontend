@@ -17,12 +17,14 @@ export const TruckChild: FC<TruckChildProps> = ({ node }) => {
             <TruckCard
                 id={truck.model}
                 model={truck.model}
+                img={truck.img}
                 name={truck.name}
                 buttonInteraction={
                     <UnlockedTruckButton
                         model={truck.model}
                         name={truck.name}
                         state={truck.state}
+                        img={truck.img}
                     />
                 }
                 link={getRouteTruckDetails(`${truck.model}`)}

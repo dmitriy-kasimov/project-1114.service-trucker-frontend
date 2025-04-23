@@ -6,10 +6,16 @@ import { TruckCard } from '@/entities/TruckCard';
 type TruckExploreProps = {
     name: string;
     model: TruckModels;
+    img?: string;
     priceScore: number;
 };
 
-export const Unlock: FC<TruckExploreProps> = ({ name, model, priceScore }) => {
+export const Unlock: FC<TruckExploreProps> = ({
+    name,
+    model,
+    priceScore,
+    img,
+}) => {
     const [modal, setModal] = useState(false);
 
     const handleExploreTruck = () => {
@@ -27,7 +33,7 @@ export const Unlock: FC<TruckExploreProps> = ({ name, model, priceScore }) => {
             >
                 <HStack gap={'l'} align={'center'}>
                     <Text>Открыть</Text>
-                    <TruckCard id={model} name={name} model={model} />
+                    <TruckCard id={model} name={name} model={model} img={img} />
                     <Text>за {priceScore} опыта?</Text>
                 </HStack>
             </ModalConfirm>

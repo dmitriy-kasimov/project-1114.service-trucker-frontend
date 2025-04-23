@@ -11,6 +11,7 @@ import { UnlockedTruckButton } from '@/features/UnlockedTruckButton';
 type TruckModulesTreeProps = {
     name: string;
     model: TruckModels;
+    img?: string;
     state: TTruckState;
     tree: TTruckTree[];
 };
@@ -18,6 +19,7 @@ type TruckModulesTreeProps = {
 export const TruckTree: FC<TruckModulesTreeProps> = ({
     name,
     model,
+    img,
     tree,
     state,
 }) => {
@@ -32,6 +34,7 @@ export const TruckTree: FC<TruckModulesTreeProps> = ({
             </HStack>
             <TruckCard
                 id={228}
+                img={img}
                 name={name}
                 model={model}
                 buttonInteraction={
@@ -39,6 +42,7 @@ export const TruckTree: FC<TruckModulesTreeProps> = ({
                         model={model}
                         state={state}
                         name={name}
+                        img={img}
                     />
                 }
             />

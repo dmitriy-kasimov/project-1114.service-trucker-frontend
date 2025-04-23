@@ -6,6 +6,7 @@ import { TTrucksTree } from '@/widgets/TrucksTree';
 const tree: TTrucksTree[] = [
     {
         name: 'Frightliner',
+        img: 'https://docs.altv.mp/gta/images/vehicle/models/packer.png',
         model: TruckModels.Frightliner,
         state: {
             unlocked: true,
@@ -17,6 +18,7 @@ const tree: TTrucksTree[] = [
             {
                 name: 'Hauler',
                 model: TruckModels.Hauler,
+                img: 'https://docs.altv.mp/gta/images/vehicle/models/hauler.png',
                 state: {
                     unlocked: true,
                     bought: false,
@@ -27,6 +29,7 @@ const tree: TTrucksTree[] = [
             {
                 name: 'Phantom',
                 model: TruckModels.Phantom,
+                img: 'https://docs.altv.mp/gta/images/vehicle/models/phantom.png',
                 state: {
                     unlocked: true,
                     bought: false,
@@ -37,6 +40,7 @@ const tree: TTrucksTree[] = [
                     {
                         name: 'Phantom 2',
                         model: TruckModels.Phantom2,
+                        img: 'https://docs.altv.mp/gta/images/vehicle/models/phantom2.png',
                         state: {
                             unlocked: false,
                             bought: false,

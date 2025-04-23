@@ -11,12 +11,14 @@ type InteractionButtonProps = {
     name: string;
     model: TruckModels;
     state: TTruckState;
+    img?: string;
 };
 
 export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
     name,
     model,
     state,
+    img,
 }) => {
     const notExplored = !state.unlocked;
 
@@ -33,7 +35,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
                         </Text>
                     }
                 >
-                    <Button disabled fullWidth>
+                    <Button disabled fullWidth variant={'outline'}>
                         <Text>Открыть за {state.priceScore}</Text>
                     </Button>
                 </Tooltip>
@@ -43,6 +45,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
                 model={model}
                 priceScore={state.priceScore || 0}
                 name={name}
+                img={img}
             />
         );
     }
@@ -57,13 +60,18 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
                         </Text>
                     }
                 >
-                    <Button disabled fullWidth>
+                    <Button disabled fullWidth variant={'outline'}>
                         <Text>Приобрести за {state.priceCash}</Text>
                     </Button>
                 </Tooltip>
             );
         return (
-            <Buy model={model} priceCash={state.priceCash || 0} name={name} />
+            <Buy
+                model={model}
+                priceCash={state.priceCash || 0}
+                name={name}
+                img={img}
+            />
         );
     }
 
@@ -73,7 +81,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
             <Tooltip
                 content={<Text color={'error'}>Ты не можешь его продать</Text>}
             >
-                <Button disabled fullWidth>
+                <Button disabled fullWidth variant={'outline'}>
                     <Text> Продать за {state.priceCashForSale}</Text>
                 </Button>
             </Tooltip>
@@ -83,6 +91,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
             model={model}
             priceCashForSale={state.priceCashForSale || 0}
             name={name}
+            img={img}
         />
     );
 };

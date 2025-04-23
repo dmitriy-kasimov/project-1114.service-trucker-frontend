@@ -6,10 +6,11 @@ import { TruckCard } from '@/entities/TruckCard';
 type TruckBuyProps = {
     name: string;
     model: TruckModels;
+    img?: string;
     priceCash: number;
 };
 
-export const Buy: FC<TruckBuyProps> = ({ name, model, priceCash }) => {
+export const Buy: FC<TruckBuyProps> = ({ name, model, priceCash, img }) => {
     const [modal, setModal] = useState(false);
 
     const handleBuyTruck = () => {
@@ -27,7 +28,7 @@ export const Buy: FC<TruckBuyProps> = ({ name, model, priceCash }) => {
             >
                 <HStack gap={'l'} align={'center'}>
                     <Text>Приобрести</Text>
-                    <TruckCard id={model} name={name} model={model} />
+                    <TruckCard id={model} name={name} model={model} img={img} />
                     <Text>за {priceCash} денег?</Text>
                 </HStack>
             </ModalConfirm>

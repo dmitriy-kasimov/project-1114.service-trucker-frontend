@@ -6,10 +6,16 @@ import { TruckCard } from '@/entities/TruckCard';
 type TruckSaleProps = {
     name: string;
     model: TruckModels;
+    img?: string;
     priceCashForSale: number;
 };
 
-export const Sale: FC<TruckSaleProps> = ({ name, model, priceCashForSale }) => {
+export const Sale: FC<TruckSaleProps> = ({
+    name,
+    model,
+    priceCashForSale,
+    img,
+}) => {
     const [modal, setModal] = useState(false);
 
     const handleBuyTruck = () => {
@@ -27,7 +33,7 @@ export const Sale: FC<TruckSaleProps> = ({ name, model, priceCashForSale }) => {
             >
                 <HStack gap={'l'} align={'center'}>
                     <Text>Продать</Text>
-                    <TruckCard id={model} name={name} model={model} />
+                    <TruckCard id={model} name={name} model={model} img={img} />
                     <Text>за {priceCashForSale} денег?</Text>
                 </HStack>
             </ModalConfirm>

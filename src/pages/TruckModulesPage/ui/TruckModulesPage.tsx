@@ -41,6 +41,7 @@ const modulesTree: TTruckTree[] = [
                         child: {
                             name: 'Phantom',
                             model: TruckModels.Phantom,
+                            img: 'https://docs.altv.mp/gta/images/vehicle/models/phantom.png',
                             state: {
                                 unlocked: true,
                                 bought: false,
@@ -109,6 +110,7 @@ const modulesTree: TTruckTree[] = [
                         child: {
                             name: 'Hauler',
                             model: TruckModels.Hauler,
+                            img: 'https://docs.altv.mp/gta/images/vehicle/models/hauler.png',
                             state: {
                                 unlocked: true,
                                 bought: false,
@@ -154,6 +156,7 @@ export const TruckModulesPage: FC = () => {
     return (
         <TruckTree
             name={'Frightliner'}
+            img="https://docs.altv.mp/gta/images/vehicle/models/packer.png"
             model={TruckModels.Frightliner}
             tree={modulesTree}
             state={{
