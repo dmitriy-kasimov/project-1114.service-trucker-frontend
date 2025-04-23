@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { TrucksTree } from '@/widgets/TrucksTree';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
-import { TTrucksTree } from '@/widgets/TrucksTree/model/types/TTrucksTree.ts';
+import { TTrucksTree } from '@/widgets/TrucksTree';
 
 const tree: TTrucksTree[] = [
     {

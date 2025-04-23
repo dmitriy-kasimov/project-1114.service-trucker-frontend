@@ -7,9 +7,9 @@ import { TruckModuleButton } from '@/features/TruckModuleButton';
 export const getTruckTree = (tree: TTruckTree[]) => {
     return tree.map((node) => (
         <VStack align={'center'} style={{ gap: '8rem' }}>
-            {node.children ? (
+            {node.modules ? (
                 <HStack gap={'m'} align={'end'}>
-                    {getTruckTree(node.children)}
+                    {getTruckTree(node.modules)}
                     <ArrowsParentToChildren tree={node} />
                 </HStack>
             ) : null}

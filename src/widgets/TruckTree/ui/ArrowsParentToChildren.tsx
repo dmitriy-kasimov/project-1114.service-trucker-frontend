@@ -8,7 +8,7 @@ type ArrowsParentToChildrenProps = {
 export function ArrowsParentToChildren(props: ArrowsParentToChildrenProps) {
     const { tree } = props;
 
-    return tree.children?.map((childTree) => (
+    return tree.modules?.map((childTree) => (
         <Xarrow
             key={`${tree.name}->${childTree.name}`}
             start={`${tree.name}`} //can be react ref

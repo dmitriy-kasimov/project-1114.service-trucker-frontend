@@ -14,7 +14,7 @@ const modulesTree: TTruckTree[] = [
             canSale: false,
             set: true,
         },
-        children: [
+        modules: [
             {
                 name: 'Battery 2',
                 model: TruckModuleModels.Battery,
@@ -30,7 +30,7 @@ const modulesTree: TTruckTree[] = [
                     unlocked: false,
                     bought: false,
                 },
-                children: [
+                modules: [
                     {
                         name: 'Battery 4',
                         model: TruckModuleModels.Battery,
@@ -52,7 +52,7 @@ const modulesTree: TTruckTree[] = [
             canSale: false,
             set: true,
         },
-        children: [
+        modules: [
             {
                 name: 'Engine 2',
                 model: TruckModuleModels.Engine,
@@ -80,7 +80,7 @@ const modulesTree: TTruckTree[] = [
             canSale: false,
             set: true,
         },
-        children: [
+        modules: [
             {
                 name: 'Fuel tank 2',
                 model: TruckModuleModels.FuelTank,
@@ -88,7 +88,7 @@ const modulesTree: TTruckTree[] = [
                     unlocked: false,
                     bought: false,
                 },
-                children: [
+                modules: [
                     {
                         name: 'Fuel tank 3',
                         model: TruckModuleModels.FuelTank,
@@ -118,7 +118,7 @@ const modulesTree: TTruckTree[] = [
             canSale: false,
             set: true,
         },
-        children: [
+        modules: [
             {
                 name: 'Axis 2',
                 model: TruckModuleModels.Axis,

@@ -1,9 +1,11 @@
 import { TTruckModuleState } from '@/entities/TruckModuleCard';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
+import { TTrucksTree } from '@/widgets/TrucksTree';
 
 export type TTruckTree = {
     model: TruckModuleModels;
     name: string;
     state: TTruckModuleState;
-    children?: TTruckTree[];
+    modules?: TTruckTree[];
+    child?: TTrucksTree;
 };
