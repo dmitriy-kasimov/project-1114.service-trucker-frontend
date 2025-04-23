@@ -23,7 +23,7 @@ export const Unlock: FC<TruckExploreProps> = ({ name, model, priceScore }) => {
             <ModalConfirm
                 isOpen={modal}
                 onClose={() => setModal(false)}
-                onConfirm={() => console.log('You explored')}
+                onConfirm={() => console.log('You unlocked')}
             >
                 <HStack gap={'l'} align={'center'}>
                     <Text>Открыть</Text>

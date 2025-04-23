@@ -1,8 +1,8 @@
 import Xarrow from 'react-xarrows';
-import { TTruckModulesTree } from '../model/types/TTruckModulesTree.ts';
+import { TTruckTree } from '../model/types/TTruckTree.ts';
 
 type ArrowsParentToChildrenProps = {
-    tree: TTruckModulesTree;
+    tree: TTruckTree;
 };
 
 export function ArrowsParentToChildren(props: ArrowsParentToChildrenProps) {

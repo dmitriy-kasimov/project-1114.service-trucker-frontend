@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { TTruckModulesTree } from '@/widgets/TruckTree/model/types/TTruckModulesTree.ts';
+import { TTruckTree } from '@/widgets/TruckTree/model/types/TTruckTree.ts';
 import { HStack, VStack } from '@project-1114/ui-kit';
 import { getTruckModulesTree } from '@/widgets/TruckTree/ui/getTruckModulesTree.tsx';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
@@ -12,7 +12,7 @@ type TruckModulesTreeProps = {
     name: string;
     model: TruckModels;
     state: TTruckState;
-    tree: TTruckModulesTree[];
+    tree: TTruckTree[];
 };
 
 export const TruckTree: FC<TruckModulesTreeProps> = ({

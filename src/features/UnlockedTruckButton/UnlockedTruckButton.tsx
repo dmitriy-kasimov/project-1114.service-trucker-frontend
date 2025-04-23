@@ -18,7 +18,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
     model,
     state,
 }) => {
-    const notExplored = !state.explored;
+    const notExplored = !state.unlocked;
 
     const notBought = !state.bought;
 

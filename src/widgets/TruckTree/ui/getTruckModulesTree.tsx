@@ -1,10 +1,10 @@
-import { TTruckModulesTree } from '@/widgets/TruckTree/model/types/TTruckModulesTree.ts';
+import { TTruckTree } from '@/widgets/TruckTree/model/types/TTruckTree.ts';
 import { HStack, VStack } from '@project-1114/ui-kit';
 import { TruckModuleCard } from '@/entities/TruckModuleCard/ui/TruckModuleCard.tsx';
 import { ArrowsParentToChildren } from './ArrowsParentToChildren.tsx';
 import { TruckModuleButton } from '@/features/TruckModuleButton';
 
-export const getTruckModulesTree = (tree: TTruckModulesTree[]) => {
+export const getTruckModulesTree = (tree: TTruckTree[]) => {
     return tree.map((node) => (
         <VStack align={'center'} style={{ gap: '8rem' }}>
             {node.children ? (

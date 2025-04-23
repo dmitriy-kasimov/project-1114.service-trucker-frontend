@@ -1,5 +1,5 @@
 export type TTruckState = {
-    explored: boolean;
+    unlocked: boolean;
     bought: boolean;
 
     priceScore?: number;
@@ -10,9 +10,4 @@ export type TTruckState = {
 
     canSale?: boolean;
     priceCashForSale?: number;
-
-    // scorePrice: number;
-    // hasScore: number;
-    // cashPrice: number;
-    // hasCash: number;
 };

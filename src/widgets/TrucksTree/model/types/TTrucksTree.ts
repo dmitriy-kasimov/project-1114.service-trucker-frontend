@@ -1,9 +1,9 @@
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TTruckState } from '@/shared/types/TTruckState.ts';
 
-export type TTruckTree = {
+export type TTrucksTree = {
     name: string;
     model: TruckModels;
     state: TTruckState;
-    children?: TTruckTree[];
+    children?: TTrucksTree[];
 };

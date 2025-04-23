@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import { TrucksTree } from '@/widgets/TrucksTree';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
-import { TTruckTree } from '@/widgets/TrucksTree/model/types/TTruckTree.ts';
+import { TTrucksTree } from '@/widgets/TrucksTree/model/types/TTrucksTree.ts';
 
-const tree: TTruckTree[] = [
+const tree: TTrucksTree[] = [
     {
         name: 'Frightliner',
         model: TruckModels.Frightliner,
         state: {
-            explored: true,
+            unlocked: true,
             bought: true,
             canSale: true,
             priceCashForSale: 100500,
@@ -18,7 +18,7 @@ const tree: TTruckTree[] = [
                 name: 'Hauler',
                 model: TruckModels.Hauler,
                 state: {
-                    explored: true,
+                    unlocked: true,
                     bought: false,
                     priceCash: 1000,
                     needCash: 0,
@@ -28,7 +28,7 @@ const tree: TTruckTree[] = [
                 name: 'Phantom',
                 model: TruckModels.Phantom,
                 state: {
-                    explored: true,
+                    unlocked: true,
                     bought: false,
                     priceCash: 1010,
                     needCash: 0,
@@ -38,7 +38,7 @@ const tree: TTruckTree[] = [
                         name: 'Phantom 2',
                         model: TruckModels.Phantom2,
                         state: {
-                            explored: false,
+                            unlocked: false,
                             bought: false,
                             priceScore: 100,
                             needScore: 0,

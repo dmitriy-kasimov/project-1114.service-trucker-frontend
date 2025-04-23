@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { TTruckTree } from '../model/types/TTruckTree.ts';
+import { TTrucksTree } from '../model/types/TTrucksTree.ts';
 import { getTrucksTree } from './getTrucksTree.tsx';
 
 type TrucksTreeProps = {
-    tree: TTruckTree[];
+    tree: TTrucksTree[];
 };
 
 export const TrucksTree: FC<TrucksTreeProps> = ({ tree }) =>
