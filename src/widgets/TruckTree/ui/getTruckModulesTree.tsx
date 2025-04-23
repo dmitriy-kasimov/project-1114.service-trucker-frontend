@@ -1,4 +1,4 @@
-import { TTruckModulesTree } from '@/widgets/TruckModulesTree/model/types/TTruckModulesTree.ts';
+import { TTruckModulesTree } from '@/widgets/TruckTree/model/types/TTruckModulesTree.ts';
 import { HStack, VStack } from '@project-1114/ui-kit';
 import { TruckModuleCard } from '@/entities/TruckModuleCard/ui/TruckModuleCard.tsx';
 import { ArrowsParentToChildren } from './ArrowsParentToChildren.tsx';

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
-import { TruckModulesTree } from '@/widgets/TruckModulesTree';
-import { TTruckModulesTree } from '@/widgets/TruckModulesTree/model/types/TTruckModulesTree.ts';
+import { TruckTree } from '@/widgets/TruckTree';
+import { TTruckModulesTree } from '@/widgets/TruckTree/model/types/TTruckModulesTree.ts';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
 
 const modulesTree: TTruckModulesTree[] = [
@@ -132,7 +132,7 @@ const modulesTree: TTruckModulesTree[] = [
 ];
 export const TruckModulesPage: FC = () => {
     return (
-        <TruckModulesTree
+        <TruckTree
             name={'Frightliner'}
             model={TruckModels.Frightliner}
             tree={modulesTree}

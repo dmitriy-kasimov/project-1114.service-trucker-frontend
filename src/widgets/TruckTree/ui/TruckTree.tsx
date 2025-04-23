@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { TTruckModulesTree } from '@/widgets/TruckModulesTree/model/types/TTruckModulesTree.ts';
+import { TTruckModulesTree } from '@/widgets/TruckTree/model/types/TTruckModulesTree.ts';
 import { HStack, VStack } from '@project-1114/ui-kit';
-import { getTruckModulesTree } from '@/widgets/TruckModulesTree/ui/getTruckModulesTree.tsx';
+import { getTruckModulesTree } from '@/widgets/TruckTree/ui/getTruckModulesTree.tsx';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { TruckCard } from '@/entities/TruckCard';
 import { TTruckState } from '@/shared/types/TTruckState.ts';
@@ -15,7 +15,7 @@ type TruckModulesTreeProps = {
     tree: TTruckModulesTree[];
 };
 
-export const TruckModulesTree: FC<TruckModulesTreeProps> = ({
+export const TruckTree: FC<TruckModulesTreeProps> = ({
     name,
     model,
     tree,
