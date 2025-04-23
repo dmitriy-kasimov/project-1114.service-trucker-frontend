@@ -35,8 +35,11 @@
                     transition: all 0.3s ease-in-out;
 
                     cursor: pointer;
+
+                    filter: saturate(1);
                     &:hover{
                         transform: scale(1.05);
+                        filter: saturate(1.5);
                     }
                 }
             }
