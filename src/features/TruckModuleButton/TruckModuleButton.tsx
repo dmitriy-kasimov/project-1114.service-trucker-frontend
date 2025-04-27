@@ -32,6 +32,7 @@ export const TruckModuleButton: FC<TruckModuleButtonProps> = ({
                             Не хватает {state.needScore} опыта
                         </Text>
                     }
+                    fullWidth
                 >
                     <Button disabled fullWidth>
                         Открыть за {state.priceScore}
@@ -56,6 +57,7 @@ export const TruckModuleButton: FC<TruckModuleButtonProps> = ({
                             Не хватает {state.needCash} денег
                         </Text>
                     }
+                    fullWidth
                 >
                     <Button disabled fullWidth>
                         Приобрести за {state.priceCash}

@@ -42,6 +42,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
                             Не хватает {state.needScore} опыта
                         </Text>
                     }
+                    fullWidth
                 >
                     <Button
                         disabled
@@ -75,6 +76,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
                             Не хватает {state.needCash} денег
                         </Text>
                     }
+                    fullWidth
                 >
                     <Button
                         disabled
@@ -104,6 +106,7 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
         return (
             <Tooltip
                 content={<Text color={'error'}>Ты не можешь его продать</Text>}
+                fullWidth
             >
                 <Button disabled fullWidth variant={'outline'} paddingV={'0'}>
                     <HStack align={'center'} gap={'xs'}>

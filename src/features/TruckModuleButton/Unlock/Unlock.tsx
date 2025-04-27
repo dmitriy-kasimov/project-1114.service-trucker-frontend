@@ -1,5 +1,12 @@
 import { FC, useState } from 'react';
-import { Button, HStack, ModalConfirm, Text } from '@project-1114/ui-kit';
+import {
+    Button,
+    HStack,
+    Icon,
+    ModalConfirm,
+    ScoreIcon,
+    Text,
+} from '@project-1114/ui-kit';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
 import { TruckModuleCard } from '@/entities/TruckModuleCard';
 
@@ -17,18 +24,32 @@ export const Unlock: FC<UnlockProps> = ({ name, model, priceScore }) => {
     };
     return (
         <>
-            <Button fullWidth onClick={handleUnlock}>
-                <Text>Открыть за {priceScore}</Text>
+            <Button fullWidth onClick={handleUnlock} paddingV={'0'}>
+                <HStack align={'center'} gap={'xs'}>
+                    <Icon Svg={ScoreIcon} width={32} height={32} />
+                    <Text>{priceScore}</Text>
+                </HStack>
             </Button>
             <ModalConfirm
                 isOpen={modal}
                 onClose={() => setModal(false)}
                 onConfirm={() => console.log('You unlocked the module')}
             >
-                <HStack gap={'l'} align={'center'}>
-                    <Text>Открыть</Text>
+                <HStack gap={'m'} align={'center'}>
+                    <Text weight={'600'} size={'l'}>
+                        Открыть
+                    </Text>
                     <TruckModuleCard id={''} model={model} name={name} />
-                    <Text>за {priceScore} опыта?</Text>
+                    <Text weight={'600'} size={'l'}>
+                        за
+                    </Text>
+                    <HStack align={'center'} gap={'xs'}>
+                        <Icon Svg={ScoreIcon} width={32} height={32} />
+                        <Text>{priceScore}</Text>
+                    </HStack>
+                    <Text weight={'600'} size={'l'}>
+                        ?
+                    </Text>
                 </HStack>
             </ModalConfirm>
         </>

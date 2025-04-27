@@ -68,8 +68,9 @@ const modulesTree: TTruckTree[] = [
                 name: 'Engine 2',
                 model: TruckModuleModels.Engine,
                 state: {
-                    unlocked: false,
+                    unlocked: true,
                     bought: false,
+                    priceCash: 1010,
                 },
             },
             {

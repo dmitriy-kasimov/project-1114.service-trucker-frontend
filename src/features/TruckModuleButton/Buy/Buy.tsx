@@ -1,5 +1,12 @@
 import { FC, useState } from 'react';
-import { Button, HStack, ModalConfirm, Text } from '@project-1114/ui-kit';
+import {
+    Button,
+    CashIcon,
+    HStack,
+    Icon,
+    ModalConfirm,
+    Text,
+} from '@project-1114/ui-kit';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
 import { TruckModuleCard } from '@/entities/TruckModuleCard';
 
@@ -17,18 +24,32 @@ export const Buy: FC<BuyProps> = ({ name, model, priceCash }) => {
     };
     return (
         <>
-            <Button fullWidth onClick={handleBuyModule}>
-                <Text>Купить за {priceCash}</Text>
+            <Button fullWidth onClick={handleBuyModule} paddingV={'0'}>
+                <HStack align={'center'} gap={'xs'}>
+                    <Icon Svg={CashIcon} width={32} height={32} />
+                    <Text>{priceCash}</Text>
+                </HStack>
             </Button>
             <ModalConfirm
                 isOpen={modal}
                 onClose={() => setModal(false)}
                 onConfirm={() => console.log('You bought')}
             >
-                <HStack gap={'l'} align={'center'}>
-                    <Text>Приобрести</Text>
+                <HStack gap={'m'} align={'center'}>
+                    <Text weight={'600'} size={'l'}>
+                        Приобрести
+                    </Text>
                     <TruckModuleCard id={''} model={model} name={name} />
-                    <Text>за {priceCash} денег?</Text>
+                    <Text weight={'600'} size={'l'}>
+                        за
+                    </Text>
+                    <HStack align={'center'} gap={'xs'}>
+                        <Icon Svg={CashIcon} width={32} height={32} />
+                        <Text>{priceCash}</Text>
+                    </HStack>
+                    <Text weight={'600'} size={'l'}>
+                        ?
+                    </Text>
                 </HStack>
             </ModalConfirm>
         </>
