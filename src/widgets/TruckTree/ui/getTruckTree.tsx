@@ -7,7 +7,7 @@ import { TruckChild } from '@/widgets/TruckTree/ui/TruckChild.tsx';
 
 export const getTruckTree = (tree: TTruckTree[]) => {
     return tree.map((node) => (
-        <VStack key={node.name} align={'center'} style={{ gap: '8rem' }}>
+        <VStack key={node.name} align={'center'} style={{ gap: '4rem' }}>
             <TruckChild node={node} />
             {node.modules ? (
                 <HStack gap={'m'} align={'end'}>
