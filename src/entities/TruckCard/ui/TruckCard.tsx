@@ -2,6 +2,7 @@ import { FC, ReactElement } from 'react';
 import {
     AppImage,
     Card,
+    classNames,
     Icon,
     Skeleton,
     Text,
@@ -22,6 +23,7 @@ interface ITruckCard {
     buttonInteraction?: ReactElement;
     link?: string;
     img?: string;
+    size?: 's' | 'm';
 }
 export const TruckCard: FC<ITruckCard> = ({
     name,
@@ -29,6 +31,7 @@ export const TruckCard: FC<ITruckCard> = ({
     buttonInteraction,
     link,
     img,
+    size = 'm',
 }) => {
     const TruckAvatar = (
         <AppImage
@@ -45,7 +48,7 @@ export const TruckCard: FC<ITruckCard> = ({
             <div className={cls.EntityCard}>
                 <Card
                     padding={'0'}
-                    className={cls.Card}
+                    className={classNames(cls.Card, {}, [cls[size]])}
                     variant={'transparent'}
                 >
                     <div className={cls.imgWrapper}>
@@ -55,7 +58,11 @@ export const TruckCard: FC<ITruckCard> = ({
                             TruckAvatar
                         )}
                     </div>
-                    <Text weight={'600'} size={'xl'} className={cls.Name}>
+                    <Text
+                        weight={'600'}
+                        size={size === 'm' ? 'xl' : 'l'}
+                        className={cls.Name}
+                    >
                         {name}
                     </Text>
                     <div className={cls.Info}>
@@ -63,8 +70,8 @@ export const TruckCard: FC<ITruckCard> = ({
                             <Icon
                                 Svg={InfoIcon}
                                 fill={'var(--color-accent)'}
-                                width={32}
-                                height={32}
+                                width={size === 'm' ? 32 : 16}
+                                height={size === 'm' ? 32 : 16}
                             />
                         </Tooltip>
                     </div>

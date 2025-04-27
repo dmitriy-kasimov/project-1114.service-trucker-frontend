@@ -30,6 +30,7 @@ export const TruckParents: FC<TruckParentsProps> = ({ parents }) => {
                                 img={parent.img}
                             />
                         }
+                        size={'s'}
                         link={getRouteTruckDetails(`${parent.model}`)}
                     />
                     <Xarrow

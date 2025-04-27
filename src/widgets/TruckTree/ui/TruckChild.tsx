@@ -27,6 +27,7 @@ export const TruckChild: FC<TruckChildProps> = ({ node }) => {
                         img={truck.img}
                     />
                 }
+                size={'s'}
                 link={getRouteTruckDetails(`${truck.model}`)}
             />
             <Xarrow

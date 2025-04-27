@@ -16,8 +16,6 @@
             justify-content: center;
             align-items: center;
 
-            width: 16rem;
-            max-height: 16rem;
             height: 100%;
             aspect-ratio: 1.25/1;
             .imgWrapper{
@@ -59,5 +57,24 @@
             }
         }
 
+        .s{
+            width: 8rem;
+            max-height: 8rem;
+            .imgWrapper{
+                .img {
+                    max-height: 8rem;
+                }
+            }
+
+        }
+
+        .m{
+            width: 16rem;
+            max-height: 16rem;
+
+            .img {
+                max-height: 16rem;
+            }
+        }
     }
 }
