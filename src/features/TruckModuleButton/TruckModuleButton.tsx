@@ -1,11 +1,12 @@
 import { FC } from 'react';
-import { Button, Tooltip, Text } from '@project-1114/ui-kit';
+import { Button, Tooltip, Text, Icon } from '@project-1114/ui-kit';
 
 import { Unlock } from './Unlock/Unlock.tsx';
 import { Buy } from './Buy/Buy.tsx';
 import { Set } from './Set/Set.tsx';
 import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
 import { TTruckModuleState } from '@/entities/TruckModuleCard';
+import SpannerIcon from '@/shared/assets/icons/spanner.svg?react';
 
 type TruckModuleButtonProps = {
     name: string;
@@ -70,7 +71,7 @@ export const TruckModuleButton: FC<TruckModuleButtonProps> = ({
     }
 
     const set = state.set;
-    if (set) return <Text>Установлен</Text>;
+    if (set) return <Icon Svg={SpannerIcon} width={32} height={32} />;
 
     return <Set model={model} name={name} />;
 };
