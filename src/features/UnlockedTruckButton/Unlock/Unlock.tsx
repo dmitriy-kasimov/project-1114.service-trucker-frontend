@@ -1,6 +1,13 @@
 import { FC, useState } from 'react';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
-import { Button, HStack, ModalConfirm, Text } from '@project-1114/ui-kit';
+import {
+    Button,
+    HStack,
+    Icon,
+    ModalConfirm,
+    ScoreIcon,
+    Text,
+} from '@project-1114/ui-kit';
 import { TruckCard } from '@/entities/TruckCard';
 
 type TruckExploreProps = {
@@ -23,18 +30,38 @@ export const Unlock: FC<TruckExploreProps> = ({
     };
     return (
         <>
-            <Button fullWidth onClick={handleExploreTruck}>
-                <Text>Открыть за {priceScore}</Text>
+            <Button fullWidth onClick={handleExploreTruck} paddingV={'0'}>
+                <HStack align={'center'} gap={'xs'}>
+                    <Icon Svg={ScoreIcon} width={32} height={32} />
+                    <Text>{priceScore}</Text>
+                </HStack>
             </Button>
             <ModalConfirm
                 isOpen={modal}
                 onClose={() => setModal(false)}
                 onConfirm={() => console.log('You unlocked')}
             >
-                <HStack gap={'l'} align={'center'}>
-                    <Text>Открыть</Text>
-                    <TruckCard id={model} name={name} model={model} img={img} />
-                    <Text>за {priceScore} опыта?</Text>
+                <HStack gap={'m'} align={'center'}>
+                    <Text weight={'600'} size={'l'}>
+                        Открыть
+                    </Text>
+                    <TruckCard
+                        id={model}
+                        name={name}
+                        model={model}
+                        img={img}
+                        size={'s'}
+                    />
+                    <Text weight={'600'} size={'l'}>
+                        за
+                    </Text>
+                    <HStack align={'center'} gap={'xs'}>
+                        <Icon Svg={ScoreIcon} width={32} height={32} />
+                        <Text>{priceScore}</Text>
+                    </HStack>
+                    <Text weight={'600'} size={'l'}>
+                        ?
+                    </Text>
                 </HStack>
             </ModalConfirm>
         </>

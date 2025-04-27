@@ -112,10 +112,10 @@ const modulesTree: TTruckTree[] = [
                             model: TruckModels.Hauler,
                             img: 'https://docs.altv.mp/gta/images/vehicle/models/hauler.png',
                             state: {
-                                unlocked: true,
+                                unlocked: false,
                                 bought: false,
-                                priceCash: 1000,
-                                needCash: 0,
+                                needScore: 0,
+                                priceScore: 120,
                             },
                         },
                     },

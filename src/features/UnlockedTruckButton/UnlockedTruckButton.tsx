@@ -1,6 +1,14 @@
 import { FC } from 'react';
 import { TTruckState } from '@/shared/types/TTruckState.ts';
-import { Button, Tooltip, Text } from '@project-1114/ui-kit';
+import {
+    Button,
+    Tooltip,
+    Text,
+    HStack,
+    Icon,
+    ScoreIcon,
+    CashIcon,
+} from '@project-1114/ui-kit';
 
 import { TruckModels } from '@/shared/const/TruckModels.ts';
 import { Unlock } from './Unlock/Unlock.tsx';
@@ -35,8 +43,16 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
                         </Text>
                     }
                 >
-                    <Button disabled fullWidth variant={'outline'}>
-                        <Text>Открыть за {state.priceScore}</Text>
+                    <Button
+                        disabled
+                        fullWidth
+                        variant={'outline'}
+                        paddingV={'0'}
+                    >
+                        <HStack align={'center'} gap={'xs'}>
+                            <Icon Svg={ScoreIcon} width={32} height={32} />
+                            <Text>{state.priceScore}</Text>
+                        </HStack>
                     </Button>
                 </Tooltip>
             );
@@ -60,8 +76,16 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
                         </Text>
                     }
                 >
-                    <Button disabled fullWidth variant={'outline'}>
-                        <Text>Приобрести за {state.priceCash}</Text>
+                    <Button
+                        disabled
+                        fullWidth
+                        variant={'outline'}
+                        paddingV={'0'}
+                    >
+                        <HStack align={'center'} gap={'xs'}>
+                            <Icon Svg={CashIcon} width={32} height={32} />
+                            <Text>{state.priceCash}</Text>
+                        </HStack>
                     </Button>
                 </Tooltip>
             );
@@ -81,8 +105,11 @@ export const UnlockedTruckButton: FC<InteractionButtonProps> = ({
             <Tooltip
                 content={<Text color={'error'}>Ты не можешь его продать</Text>}
             >
-                <Button disabled fullWidth variant={'outline'}>
-                    <Text> Продать за {state.priceCashForSale}</Text>
+                <Button disabled fullWidth variant={'outline'} paddingV={'0'}>
+                    <HStack align={'center'} gap={'xs'}>
+                        <Icon Svg={CashIcon} width={32} height={32} />
+                        <Text>{state.priceCashForSale}</Text>
+                    </HStack>
                 </Button>
             </Tooltip>
         );

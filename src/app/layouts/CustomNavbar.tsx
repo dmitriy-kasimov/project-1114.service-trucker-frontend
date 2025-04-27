@@ -1,4 +1,13 @@
-import { HStack, Navbar, Text } from '@project-1114/ui-kit';
+import {
+    CashIcon,
+    ScoreIcon,
+    FreeScoreIcon,
+    DonatScoreIcon,
+    HStack,
+    Icon,
+    Navbar,
+    Text,
+} from '@project-1114/ui-kit';
 
 export const CustomNavbar = () => {
     return (
@@ -15,10 +24,30 @@ export const CustomNavbar = () => {
                     gap={'l'}
                     style={{ marginRight: '1rem' }}
                 >
-                    <Text color={'main'}>Валюта 1</Text>
-                    <Text color={'main'}>Валюта 2</Text>
-                    <Text color={'main'}>Валюта 3</Text>
-                    <Text color={'main'}>Валюта 4</Text>
+                    <HStack align={'center'} gap={'s'}>
+                        <Icon Svg={CashIcon} width={32} height={32} />
+                        <Text color={'main'} weight={'500'}>
+                            100.0
+                        </Text>
+                    </HStack>
+                    <HStack align={'center'} gap={'s'}>
+                        <Icon Svg={ScoreIcon} width={32} height={32} />
+                        <Text color={'main'} weight={'500'}>
+                            100
+                        </Text>
+                    </HStack>{' '}
+                    <HStack align={'center'} gap={'s'}>
+                        <Icon Svg={FreeScoreIcon} width={32} height={32} />
+                        <Text color={'main'} weight={'500'}>
+                            17
+                        </Text>
+                    </HStack>{' '}
+                    <HStack align={'center'} gap={'s'}>
+                        <Icon Svg={DonatScoreIcon} width={32} height={32} />
+                        <Text color={'main'} weight={'500'}>
+                            228
+                        </Text>
+                    </HStack>
                 </HStack>
             </HStack>
         </Navbar>
