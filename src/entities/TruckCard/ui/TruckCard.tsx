@@ -30,6 +30,16 @@ export const TruckCard: FC<ITruckCard> = ({
     link,
     img,
 }) => {
+    const TruckAvatar = (
+        <AppImage
+            fallback={<Skeleton width={'16rem'} height={'16rem'} />}
+            src={img || ''}
+            alt={name}
+            decoding={'async'}
+            className={cls.img}
+        />
+    );
+
     return (
         <div id={`${id}`} className={cls.EntityCardWrapper}>
             <div className={cls.EntityCard}>
@@ -38,39 +48,13 @@ export const TruckCard: FC<ITruckCard> = ({
                     className={cls.Card}
                     variant={'transparent'}
                 >
-                    {link ? (
-                        <div className={cls.imgWrapper}>
-                            <Link to={link}>
-                                <AppImage
-                                    fallback={
-                                        <Skeleton
-                                            width={'16rem'}
-                                            height={'16rem'}
-                                        />
-                                    }
-                                    src={img || ''}
-                                    alt={name}
-                                    decoding={'async'}
-                                    className={cls.img}
-                                />
-                            </Link>
-                        </div>
-                    ) : (
-                        <div className={cls.imgWrapper}>
-                            <AppImage
-                                fallback={
-                                    <Skeleton
-                                        width={'16rem'}
-                                        height={'16rem'}
-                                    />
-                                }
-                                src={img || ''}
-                                alt={name}
-                                decoding={'async'}
-                                className={cls.img}
-                            />
-                        </div>
-                    )}
+                    <div className={cls.imgWrapper}>
+                        {link ? (
+                            <Link to={link}>{TruckAvatar}</Link>
+                        ) : (
+                            TruckAvatar
+                        )}
+                    </div>
                     <Text weight={'600'} size={'xl'} className={cls.Name}>
                         {name}
                     </Text>

@@ -4,6 +4,7 @@ import { HStack } from '@project-1114/ui-kit';
 import { TruckCard } from '@/entities/TruckCard';
 import { UnlockedTruckButton } from '@/features/UnlockedTruckButton';
 import Xarrow from 'react-xarrows';
+import { getRouteTruckDetails } from '@/shared/const/router.ts';
 
 type TruckParentsProps = {
     parents?: TTrucksTree[];
@@ -29,6 +30,7 @@ export const TruckParents: FC<TruckParentsProps> = ({ parents }) => {
                                 img={parent.img}
                             />
                         }
+                        link={getRouteTruckDetails(`${parent.model}`)}
                     />
                     <Xarrow
                         key={`${parent.name} -> ${228}`}
