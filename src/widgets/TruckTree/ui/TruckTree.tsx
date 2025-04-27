@@ -3,10 +3,10 @@ import { TTruckTree } from '@/widgets/TruckTree/model/types/TTruckTree.ts';
 import { HStack, VStack } from '@project-1114/ui-kit';
 import { getTruckTree } from '@/widgets/TruckTree/ui/getTruckTree.tsx';
 import { TruckModels } from '@/shared/const/TruckModels.ts';
-import { TruckCard } from '@/entities/TruckCard';
 import { TTruckState } from '@/shared/types/TTruckState.ts';
-import Xarrow from 'react-xarrows';
-import { UnlockedTruckButton } from '@/features/UnlockedTruckButton';
+import { TruckCurrent } from '@/widgets/TruckTree/ui/TruckCurrent.tsx';
+import { TTrucksTree } from '@/widgets/TrucksTree';
+import { TruckParents } from './TruckParents';
 
 type TruckModulesTreeProps = {
     name: string;
@@ -14,6 +14,7 @@ type TruckModulesTreeProps = {
     img?: string;
     state: TTruckState;
     tree: TTruckTree[];
+    parents?: TTrucksTree[];
 };
 
 export const TruckTree: FC<TruckModulesTreeProps> = ({
@@ -22,6 +23,7 @@ export const TruckTree: FC<TruckModulesTreeProps> = ({
     img,
     tree,
     state,
+    parents,
 }) => {
     return (
         <VStack
@@ -32,32 +34,14 @@ export const TruckTree: FC<TruckModulesTreeProps> = ({
             <HStack gap={'xl'} align={'end'}>
                 {getTruckTree(tree)}
             </HStack>
-            <TruckCard
-                id={228}
-                img={img}
+            <TruckCurrent
+                state={state}
                 name={name}
                 model={model}
-                buttonInteraction={
-                    <UnlockedTruckButton
-                        model={model}
-                        state={state}
-                        name={name}
-                        img={img}
-                    />
-                }
+                tree={tree}
+                img={img}
             />
-            {tree.map((module) => (
-                <Xarrow
-                    key={`${name}->${module.name}`}
-                    start={`228`} //can be react ref
-                    end={`${module.name}`} //or an id
-                    color={'var(--color-secondary)'}
-                    strokeWidth={2}
-                    startAnchor={'top'}
-                    endAnchor={'bottom'}
-                    path={'grid'}
-                />
-            ))}
+            <TruckParents parents={parents} />
         </VStack>
     );
 };

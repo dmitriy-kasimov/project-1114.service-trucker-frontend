@@ -75,10 +75,7 @@ export const TruckCard: FC<ITruckCard> = ({
                         {name}
                     </Text>
                     <div className={cls.Info}>
-                        <Tooltip
-                            content={<TruckTooltip name={name} />}
-                            direction={'bottom'}
-                        >
+                        <Tooltip content={<TruckTooltip name={name} />}>
                             <Icon
                                 Svg={InfoIcon}
                                 fill={'var(--color-accent)'}

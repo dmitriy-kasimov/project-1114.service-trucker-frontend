@@ -165,6 +165,30 @@ export const TruckModulesPage: FC = () => {
                 canSale: true,
                 priceCashForSale: 100500,
             }}
+            parents={[
+                {
+                    name: 'Hauler 2',
+                    model: TruckModels.Hauler2,
+                    img: 'https://docs.altv.mp/gta/images/vehicle/models/hauler2.png',
+                    state: {
+                        unlocked: true,
+                        bought: false,
+                        priceCash: 1000,
+                        needCash: 0,
+                    },
+                },
+                {
+                    name: 'Phantom 3',
+                    model: TruckModels.Phantom3,
+                    img: 'https://docs.altv.mp/gta/images/vehicle/models/phantom3.png',
+                    state: {
+                        unlocked: true,
+                        bought: false,
+                        priceCash: 1000,
+                        needCash: 0,
+                    },
+                },
+            ]}
         />
     );
 };

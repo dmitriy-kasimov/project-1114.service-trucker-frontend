@@ -29,10 +29,7 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
                         {name}
                     </Text>
                     <div className={cls.Info}>
-                        <Tooltip
-                            content={<TruckModuleTooltip name={name} />}
-                            direction={'bottom'}
-                        >
+                        <Tooltip content={<TruckModuleTooltip name={name} />}>
                             <Icon
                                 Svg={InfoIcon}
                                 fill={'var(--color-accent)'}

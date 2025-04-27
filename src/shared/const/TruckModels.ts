@@ -4,4 +4,5 @@ export enum TruckModels {
     Hauler2,
     Phantom,
     Phantom2,
+    Phantom3,
 }

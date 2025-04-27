@@ -23,8 +23,8 @@ export const TruckModulesInfo: Record<TruckModuleModels, TTruckModule> = {
         icon: (
             <Icon
                 Svg={EngineIcon}
-                width={100}
-                height={100}
+                width={75}
+                height={75}
                 stroke={'var(--color-accent)'}
             />
         ),
@@ -33,8 +33,8 @@ export const TruckModulesInfo: Record<TruckModuleModels, TTruckModule> = {
         icon: (
             <Icon
                 Svg={FuelTankIcon}
-                width={100}
-                height={100}
+                width={64}
+                height={64}
                 fill="var(--color-accent)"
             />
         ),
@@ -43,8 +43,8 @@ export const TruckModulesInfo: Record<TruckModuleModels, TTruckModule> = {
         icon: (
             <Icon
                 Svg={BatteryIcon}
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 fill="var(--color-accent)"
             />
         ),
