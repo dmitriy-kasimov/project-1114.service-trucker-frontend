@@ -7,16 +7,15 @@ import {
     ScoreIcon,
     Text,
 } from '@project-1114/ui-kit';
-import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
 import { TruckModuleCard } from '@/entities/TruckModuleCard';
 
 type UnlockProps = {
     name: string;
-    model: TruckModuleModels;
+    img: string;
     priceScore: number;
 };
 
-export const Unlock: FC<UnlockProps> = ({ name, model, priceScore }) => {
+export const Unlock: FC<UnlockProps> = ({ name, img, priceScore }) => {
     const [modal, setModal] = useState(false);
 
     const handleUnlock = () => {
@@ -39,7 +38,7 @@ export const Unlock: FC<UnlockProps> = ({ name, model, priceScore }) => {
                     <Text weight={'600'} size={'l'}>
                         Открыть
                     </Text>
-                    <TruckModuleCard id={''} model={model} name={name} />
+                    <TruckModuleCard id={''} img={img} name={name} />
                     <Text weight={'600'} size={'l'}>
                         за
                     </Text>

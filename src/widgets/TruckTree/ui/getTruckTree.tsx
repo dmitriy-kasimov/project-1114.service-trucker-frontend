@@ -18,13 +18,12 @@ export const getTruckTree = (tree: TTruckTree[]) => {
             <TruckModuleCard
                 id={node.name}
                 img={node.img}
-                model={node.model}
                 name={node.name}
                 buttonInteraction={
                     <TruckModuleButton
-                        model={node.model}
                         name={node.name}
                         state={node.state}
+                        img={node.img}
                     />
                 }
             />

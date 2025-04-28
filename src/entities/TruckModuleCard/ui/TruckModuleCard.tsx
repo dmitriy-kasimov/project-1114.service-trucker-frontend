@@ -1,5 +1,4 @@
 import { FC, ReactElement } from 'react';
-import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
 import {
     AppImage,
     Card,
@@ -8,21 +7,18 @@ import {
     Text,
     Tooltip,
 } from '@project-1114/ui-kit';
-import { TruckModulesInfo } from '@/shared/const/TruckModulesInfo.tsx';
 import cls from './TruckModuleCard.module.scss';
 import InfoIcon from '@/shared/assets/icons/InfoIcon.svg?react';
 import { TruckModuleTooltip } from '@/entities/TruckModuleCard/ui/TruckModuleTooltip.tsx';
 type TruckModuleCardProps = {
     id: string;
-    model: TruckModuleModels;
     name: string;
-    img?: string;
+    img: string;
     buttonInteraction?: ReactElement;
 };
 
 export const TruckModuleCard: FC<TruckModuleCardProps> = ({
     id,
-    model,
     name,
     img,
     buttonInteraction,
@@ -40,9 +36,7 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
         <div id={id} className={cls.EntityCardWrapper}>
             <div className={cls.EntityCard}>
                 <Card padding={'0'} className={cls.Card}>
-                    <div className={cls.imgWrapper}>
-                        {img ? ModuleAvatar : TruckModulesInfo[model].icon}
-                    </div>
+                    <div className={cls.imgWrapper}>{ModuleAvatar}</div>
                     <Text weight={'600'} className={cls.Name}>
                         {name}
                     </Text>

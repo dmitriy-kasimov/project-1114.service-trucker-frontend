@@ -1,15 +1,14 @@
 import { FC, useState } from 'react';
 import { Button, HStack, Icon, ModalConfirm, Text } from '@project-1114/ui-kit';
-import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
 import { TruckModuleCard } from '@/entities/TruckModuleCard';
 import SpannerIcon from '@/shared/assets/icons/spanner.svg?react';
 
 type SetProps = {
     name: string;
-    model: TruckModuleModels;
+    img: string;
 };
 
-export const Set: FC<SetProps> = ({ name, model }) => {
+export const Set: FC<SetProps> = ({ name, img }) => {
     const [modal, setModal] = useState(false);
 
     const handleSetModule = () => {
@@ -31,7 +30,7 @@ export const Set: FC<SetProps> = ({ name, model }) => {
                     <Text weight={'600'} size={'l'}>
                         Установить
                     </Text>
-                    <TruckModuleCard id={''} model={model} name={name} />
+                    <TruckModuleCard id={''} img={img} name={name} />
                     <Text weight={'600'} size={'l'}>
                         в качестве основного модуля?
                     </Text>

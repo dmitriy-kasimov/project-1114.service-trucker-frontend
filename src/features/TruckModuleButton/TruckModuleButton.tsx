@@ -1,22 +1,29 @@
 import { FC } from 'react';
-import { Button, Tooltip, Text, Icon } from '@project-1114/ui-kit';
+import {
+    Button,
+    Tooltip,
+    Text,
+    Icon,
+    HStack,
+    ScoreIcon,
+    CashIcon,
+} from '@project-1114/ui-kit';
 
 import { Unlock } from './Unlock/Unlock.tsx';
 import { Buy } from './Buy/Buy.tsx';
 import { Set } from './Set/Set.tsx';
-import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
 import { TTruckModuleState } from '@/entities/TruckModuleCard';
 import SpannerIcon from '@/shared/assets/icons/spanner.svg?react';
 
 type TruckModuleButtonProps = {
     name: string;
-    model: TruckModuleModels;
+    img: string;
     state: TTruckModuleState;
 };
 
 export const TruckModuleButton: FC<TruckModuleButtonProps> = ({
     name,
-    model,
+    img,
     state,
 }) => {
     const notExplored = !state.unlocked;
@@ -35,17 +42,21 @@ export const TruckModuleButton: FC<TruckModuleButtonProps> = ({
                     }
                     fullWidth
                 >
-                    <Button disabled fullWidth>
-                        Открыть за {state.priceScore}
+                    <Button
+                        disabled
+                        fullWidth
+                        variant={'outline'}
+                        paddingV={'0'}
+                    >
+                        <HStack align={'center'} gap={'xs'}>
+                            <Icon Svg={ScoreIcon} width={32} height={32} />
+                            <Text>{state.priceScore}</Text>
+                        </HStack>
                     </Button>
                 </Tooltip>
             );
         return (
-            <Unlock
-                model={model}
-                priceScore={state.priceScore || 0}
-                name={name}
-            />
+            <Unlock img={img} priceScore={state.priceScore || 0} name={name} />
         );
     }
     if (notBought) {
@@ -60,18 +71,24 @@ export const TruckModuleButton: FC<TruckModuleButtonProps> = ({
                     }
                     fullWidth
                 >
-                    <Button disabled fullWidth>
-                        Приобрести за {state.priceCash}
+                    <Button
+                        disabled
+                        fullWidth
+                        variant={'outline'}
+                        paddingV={'0'}
+                    >
+                        <HStack align={'center'} gap={'xs'}>
+                            <Icon Svg={CashIcon} width={32} height={32} />
+                            <Text>{state.priceCash}</Text>
+                        </HStack>
                     </Button>
                 </Tooltip>
             );
-        return (
-            <Buy model={model} priceCash={state.priceCash || 0} name={name} />
-        );
+        return <Buy priceCash={state.priceCash || 0} name={name} img={img} />;
     }
 
     const set = state.set;
     if (set) return <Icon Svg={SpannerIcon} width={32} height={32} />;
 
-    return <Set model={model} name={name} />;
+    return <Set name={name} img={img} />;
 };

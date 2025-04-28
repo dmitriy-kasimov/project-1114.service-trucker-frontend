@@ -7,16 +7,15 @@ import {
     ModalConfirm,
     Text,
 } from '@project-1114/ui-kit';
-import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
 import { TruckModuleCard } from '@/entities/TruckModuleCard';
 
 type BuyProps = {
     name: string;
-    model: TruckModuleModels;
+    img: string;
     priceCash: number;
 };
 
-export const Buy: FC<BuyProps> = ({ name, model, priceCash }) => {
+export const Buy: FC<BuyProps> = ({ name, img, priceCash }) => {
     const [modal, setModal] = useState(false);
 
     const handleBuyModule = () => {
@@ -39,7 +38,7 @@ export const Buy: FC<BuyProps> = ({ name, model, priceCash }) => {
                     <Text weight={'600'} size={'l'}>
                         Приобрести
                     </Text>
-                    <TruckModuleCard id={''} model={model} name={name} />
+                    <TruckModuleCard id={''} img={img} name={name} />
                     <Text weight={'600'} size={'l'}>
                         за
                     </Text>
