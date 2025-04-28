@@ -23,7 +23,12 @@ export const Unlock: FC<UnlockProps> = ({ name, img, priceScore }) => {
     };
     return (
         <>
-            <Button fullWidth onClick={handleUnlock} paddingV={'0'}>
+            <Button
+                fullWidth
+                onClick={handleUnlock}
+                paddingV={'0'}
+                paddingH={'0'}
+            >
                 <HStack align={'center'} gap={'xs'}>
                     <Icon Svg={ScoreIcon} width={32} height={32} />
                     <Text>{priceScore}</Text>

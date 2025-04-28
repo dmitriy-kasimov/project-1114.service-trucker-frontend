@@ -47,6 +47,7 @@ export const TruckModuleButton: FC<TruckModuleButtonProps> = ({
                         fullWidth
                         variant={'outline'}
                         paddingV={'0'}
+                        paddingH={'0'}
                     >
                         <HStack align={'center'} gap={'xs'}>
                             <Icon Svg={ScoreIcon} width={32} height={32} />
@@ -76,6 +77,7 @@ export const TruckModuleButton: FC<TruckModuleButtonProps> = ({
                         fullWidth
                         variant={'outline'}
                         paddingV={'0'}
+                        paddingH={'0'}
                     >
                         <HStack align={'center'} gap={'xs'}>
                             <Icon Svg={CashIcon} width={32} height={32} />

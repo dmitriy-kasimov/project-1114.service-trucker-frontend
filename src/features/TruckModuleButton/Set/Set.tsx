@@ -16,7 +16,12 @@ export const Set: FC<SetProps> = ({ name, img }) => {
     };
     return (
         <>
-            <Button fullWidth onClick={handleSetModule} paddingV={'0'}>
+            <Button
+                fullWidth
+                onClick={handleSetModule}
+                paddingV={'0'}
+                paddingH={'0'}
+            >
                 <HStack align={'center'} gap={'xs'}>
                     <Icon Svg={SpannerIcon} width={32} height={32} />
                 </HStack>

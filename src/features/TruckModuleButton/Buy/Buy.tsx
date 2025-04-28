@@ -23,7 +23,12 @@ export const Buy: FC<BuyProps> = ({ name, img, priceCash }) => {
     };
     return (
         <>
-            <Button fullWidth onClick={handleBuyModule} paddingV={'0'}>
+            <Button
+                fullWidth
+                onClick={handleBuyModule}
+                paddingV={'0'}
+                paddingH={'0'}
+            >
                 <HStack align={'center'} gap={'xs'}>
                     <Icon Svg={CashIcon} width={32} height={32} />
                     <Text>{priceCash}</Text>

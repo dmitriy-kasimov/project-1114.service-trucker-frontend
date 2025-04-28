@@ -6,6 +6,7 @@ import {
     Skeleton,
     Text,
     Tooltip,
+    VStack,
 } from '@project-1114/ui-kit';
 import cls from './TruckModuleCard.module.scss';
 import InfoIcon from '@/shared/assets/icons/InfoIcon.svg?react';
@@ -34,7 +35,7 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
     );
     return (
         <div id={id} className={cls.EntityCardWrapper}>
-            <div className={cls.EntityCard}>
+            <VStack gap={'xxs'} align={'center'}>
                 <Card padding={'0'} className={cls.Card}>
                     <div className={cls.imgWrapper}>{ModuleAvatar}</div>
                     <Text weight={'600'} className={cls.Name}>
@@ -53,7 +54,7 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
                 </Card>
 
                 {buttonInteraction}
-            </div>
+            </VStack>
         </div>
     );
 };
