@@ -5,6 +5,7 @@ import { TTrucksTree } from '@/widgets/TrucksTree';
 export type TTruckTree = {
     model: TruckModuleModels;
     name: string;
+    img?: string;
     state: TTruckModuleState;
     modules?: TTruckTree[];
     child?: TTrucksTree;

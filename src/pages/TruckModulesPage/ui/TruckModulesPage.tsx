@@ -7,6 +7,7 @@ import { TruckModuleModels } from '@/shared/const/TruckModuleModels.ts';
 const modulesTree: TTruckTree[] = [
     {
         name: 'Battery 1',
+        img: 'https://solarwarehousesa.com/cdn/shop/files/610-622-mfr-ingle-car-battery-726.png?v=1707852859',
         model: TruckModuleModels.Battery,
         state: {
             unlocked: true,
@@ -17,6 +18,7 @@ const modulesTree: TTruckTree[] = [
         modules: [
             {
                 name: 'Battery 2',
+                img: 'https://solarwarehousesa.com/cdn/shop/files/610-622-mfr-ingle-car-battery-726.png?v=1707852859',
                 model: TruckModuleModels.Battery,
                 state: {
                     unlocked: true,
@@ -25,6 +27,7 @@ const modulesTree: TTruckTree[] = [
             },
             {
                 name: 'Battery 3',
+                img: 'https://solarwarehousesa.com/cdn/shop/files/610-622-mfr-ingle-car-battery-726.png?v=1707852859',
                 model: TruckModuleModels.Battery,
                 state: {
                     unlocked: false,
@@ -33,6 +36,7 @@ const modulesTree: TTruckTree[] = [
                 modules: [
                     {
                         name: 'Battery 4',
+                        img: 'https://solarwarehousesa.com/cdn/shop/files/610-622-mfr-ingle-car-battery-726.png?v=1707852859',
                         model: TruckModuleModels.Battery,
                         state: {
                             unlocked: false,
@@ -56,6 +60,7 @@ const modulesTree: TTruckTree[] = [
     },
     {
         name: 'Engine 1',
+        img: 'https://atlas-content1-cdn.pixelsquid.com/assets_v2/252/2529258979264042826/jpeg-600/G03.jpg',
         model: TruckModuleModels.Engine,
         state: {
             unlocked: true,
@@ -66,6 +71,7 @@ const modulesTree: TTruckTree[] = [
         modules: [
             {
                 name: 'Engine 2',
+                img: 'https://atlas-content1-cdn.pixelsquid.com/assets_v2/252/2529258979264042826/jpeg-600/G03.jpg',
                 model: TruckModuleModels.Engine,
                 state: {
                     unlocked: true,
@@ -75,6 +81,7 @@ const modulesTree: TTruckTree[] = [
             },
             {
                 name: 'Engine 3',
+                img: 'https://atlas-content1-cdn.pixelsquid.com/assets_v2/252/2529258979264042826/jpeg-600/G03.jpg',
                 model: TruckModuleModels.Engine,
                 state: {
                     unlocked: false,
@@ -85,6 +92,7 @@ const modulesTree: TTruckTree[] = [
     },
     {
         name: 'Fuel tank 1',
+        img: 'https://5.imimg.com/data5/PR/LP/QI/SELLER-10602912/automotive-car-deep-draw-metal-fuel-tank-500x500-500x500.jpg',
         model: TruckModuleModels.FuelTank,
         state: {
             unlocked: true,
@@ -95,6 +103,7 @@ const modulesTree: TTruckTree[] = [
         modules: [
             {
                 name: 'Fuel tank 2',
+                img: 'https://5.imimg.com/data5/PR/LP/QI/SELLER-10602912/automotive-car-deep-draw-metal-fuel-tank-500x500-500x500.jpg',
                 model: TruckModuleModels.FuelTank,
                 state: {
                     unlocked: false,
@@ -103,6 +112,7 @@ const modulesTree: TTruckTree[] = [
                 modules: [
                     {
                         name: 'Fuel tank 4',
+                        img: 'https://5.imimg.com/data5/PR/LP/QI/SELLER-10602912/automotive-car-deep-draw-metal-fuel-tank-500x500-500x500.jpg',
                         model: TruckModuleModels.FuelTank,
                         state: {
                             unlocked: false,
@@ -124,6 +134,7 @@ const modulesTree: TTruckTree[] = [
             },
             {
                 name: 'Fuel tank 3',
+                img: 'https://5.imimg.com/data5/PR/LP/QI/SELLER-10602912/automotive-car-deep-draw-metal-fuel-tank-500x500-500x500.jpg',
                 model: TruckModuleModels.FuelTank,
                 state: {
                     unlocked: false,
@@ -134,6 +145,7 @@ const modulesTree: TTruckTree[] = [
     },
     {
         name: 'Axis 1',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5kf9vuJmCFqsdEfClTFUJpsIQnW-_bf8M0A&s',
         model: TruckModuleModels.Axis,
         state: {
             unlocked: true,
@@ -144,6 +156,7 @@ const modulesTree: TTruckTree[] = [
         modules: [
             {
                 name: 'Axis 2',
+                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5kf9vuJmCFqsdEfClTFUJpsIQnW-_bf8M0A&s',
                 model: TruckModuleModels.Axis,
                 state: {
                     unlocked: false,

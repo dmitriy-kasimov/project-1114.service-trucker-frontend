@@ -17,6 +17,7 @@ export const getTruckTree = (tree: TTruckTree[]) => {
             ) : null}
             <TruckModuleCard
                 id={node.name}
+                img={node.img}
                 model={node.model}
                 name={node.name}
                 buttonInteraction={
