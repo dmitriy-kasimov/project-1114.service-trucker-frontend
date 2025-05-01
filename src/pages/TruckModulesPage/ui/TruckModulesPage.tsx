@@ -25,37 +25,6 @@ const modulesTree: TTruckTree[] = [
                     bought: true,
                 },
             },
-            {
-                name: 'Battery 3',
-                img: 'https://solarwarehousesa.com/cdn/shop/files/610-622-mfr-ingle-car-battery-726.png?v=1707852859',
-                model: TruckModuleModels.Battery,
-                state: {
-                    unlocked: false,
-                    bought: false,
-                },
-                modules: [
-                    {
-                        name: 'Battery 4',
-                        img: 'https://solarwarehousesa.com/cdn/shop/files/610-622-mfr-ingle-car-battery-726.png?v=1707852859',
-                        model: TruckModuleModels.Battery,
-                        state: {
-                            unlocked: false,
-                            bought: false,
-                        },
-                        child: {
-                            name: 'Phantom',
-                            model: TruckModels.Phantom,
-                            img: 'https://docs.altv.mp/gta/images/vehicle/models/phantom.png',
-                            state: {
-                                unlocked: true,
-                                bought: false,
-                                priceCash: 1010,
-                                needCash: 0,
-                            },
-                        },
-                    },
-                ],
-            },
         ],
     },
     {
@@ -74,18 +43,21 @@ const modulesTree: TTruckTree[] = [
                 img: 'https://atlas-content1-cdn.pixelsquid.com/assets_v2/252/2529258979264042826/jpeg-600/G03.jpg',
                 model: TruckModuleModels.Engine,
                 state: {
-                    unlocked: true,
-                    bought: false,
-                    priceCash: 1010,
-                },
-            },
-            {
-                name: 'Engine 3',
-                img: 'https://atlas-content1-cdn.pixelsquid.com/assets_v2/252/2529258979264042826/jpeg-600/G03.jpg',
-                model: TruckModuleModels.Engine,
-                state: {
                     unlocked: false,
                     bought: false,
+                    needScore: 10,
+                    priceScore: 20,
+                },
+                child: {
+                    name: 'Phantom 3',
+                    model: TruckModels.Phantom3,
+                    img: 'https://docs.altv.mp/gta/images/vehicle/models/phantom3.png',
+                    state: {
+                        unlocked: false,
+                        bought: false,
+                        priceScore: 100,
+                        needScore: 1000,
+                    },
                 },
             },
         ],
@@ -108,37 +80,19 @@ const modulesTree: TTruckTree[] = [
                 state: {
                     unlocked: false,
                     bought: false,
+                    priceScore: 14,
+                    needScore: 4,
                 },
-                modules: [
-                    {
-                        name: 'Fuel tank 4',
-                        img: 'https://5.imimg.com/data5/PR/LP/QI/SELLER-10602912/automotive-car-deep-draw-metal-fuel-tank-500x500-500x500.jpg',
-                        model: TruckModuleModels.FuelTank,
-                        state: {
-                            unlocked: false,
-                            bought: false,
-                        },
-                        child: {
-                            name: 'Hauler',
-                            model: TruckModels.Hauler,
-                            img: 'https://docs.altv.mp/gta/images/vehicle/models/hauler.png',
-                            state: {
-                                unlocked: false,
-                                bought: false,
-                                needScore: 0,
-                                priceScore: 120,
-                            },
-                        },
-                    },
-                ],
             },
             {
                 name: 'Fuel tank 3',
                 img: 'https://5.imimg.com/data5/PR/LP/QI/SELLER-10602912/automotive-car-deep-draw-metal-fuel-tank-500x500-500x500.jpg',
                 model: TruckModuleModels.FuelTank,
                 state: {
-                    unlocked: false,
+                    unlocked: true,
                     bought: false,
+                    priceCash: 14000,
+                    needCash: 0,
                 },
             },
         ],
@@ -153,53 +107,31 @@ const modulesTree: TTruckTree[] = [
             canSale: false,
             set: true,
         },
-        modules: [
-            {
-                name: 'Axis 2',
-                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5kf9vuJmCFqsdEfClTFUJpsIQnW-_bf8M0A&s',
-                model: TruckModuleModels.Axis,
-                state: {
-                    unlocked: false,
-                    bought: false,
-                },
-            },
-        ],
     },
 ];
 export const TruckModulesPage: FC = () => {
     return (
         <TruckTree
-            name={'Frightliner'}
-            img="https://docs.altv.mp/gta/images/vehicle/models/packer.png"
-            model={TruckModels.Frightliner}
+            name={'Phantom'}
+            img="https://docs.altv.mp/gta/images/vehicle/models/phantom.png"
+            model={TruckModels.Phantom}
             tree={modulesTree}
             state={{
                 unlocked: true,
                 bought: true,
+                priceCashForSale: 55000,
                 canSale: true,
-                priceCashForSale: 100500,
             }}
             parents={[
                 {
-                    name: 'Hauler 2',
-                    model: TruckModels.Hauler2,
-                    img: 'https://docs.altv.mp/gta/images/vehicle/models/hauler2.png',
+                    name: 'Frightliner',
+                    model: TruckModels.Frightliner,
+                    img: 'https://docs.altv.mp/gta/images/vehicle/models/packer.png',
                     state: {
                         unlocked: true,
-                        bought: false,
-                        priceCash: 1000,
-                        needCash: 0,
-                    },
-                },
-                {
-                    name: 'Phantom 3',
-                    model: TruckModels.Phantom3,
-                    img: 'https://docs.altv.mp/gta/images/vehicle/models/phantom3.png',
-                    state: {
-                        unlocked: true,
-                        bought: false,
-                        priceCash: 1000,
-                        needCash: 0,
+                        bought: true,
+                        canSale: true,
+                        priceCashForSale: 35000,
                     },
                 },
             ]}

@@ -27,19 +27,19 @@ export const CustomNavbar = () => {
                     <HStack align={'center'} gap={'s'}>
                         <Icon Svg={CashIcon} width={32} height={32} />
                         <Text color={'main'} weight={'500'}>
-                            100.0
+                            14000
                         </Text>
                     </HStack>
                     <HStack align={'center'} gap={'s'}>
                         <Icon Svg={ScoreIcon} width={32} height={32} />
                         <Text color={'main'} weight={'500'}>
-                            100
+                            7
                         </Text>
                     </HStack>{' '}
                     <HStack align={'center'} gap={'s'}>
                         <Icon Svg={FreeScoreIcon} width={32} height={32} />
                         <Text color={'main'} weight={'500'}>
-                            17
+                            3
                         </Text>
                     </HStack>{' '}
                     <HStack align={'center'} gap={'s'}>

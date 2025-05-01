@@ -12,7 +12,7 @@ const tree: TTrucksTree[] = [
             unlocked: true,
             bought: true,
             canSale: true,
-            priceCashForSale: 100500,
+            priceCashForSale: 35000,
         },
         children: [
             {
@@ -20,11 +20,24 @@ const tree: TTrucksTree[] = [
                 model: TruckModels.Hauler,
                 img: 'https://docs.altv.mp/gta/images/vehicle/models/hauler.png',
                 state: {
-                    unlocked: true,
+                    unlocked: false,
                     bought: false,
-                    priceCash: 1000,
-                    needCash: 0,
+                    priceScore: 45,
+                    needScore: 28,
                 },
+                children: [
+                    {
+                        name: 'Hauler 2',
+                        model: TruckModels.Hauler2,
+                        img: 'https://docs.altv.mp/gta/images/vehicle/models/hauler2.png',
+                        state: {
+                            unlocked: false,
+                            bought: false,
+                            priceScore: 85,
+                            needScore: 68,
+                        },
+                    },
+                ],
             },
             {
                 name: 'Phantom',
@@ -32,15 +45,15 @@ const tree: TTrucksTree[] = [
                 img: 'https://docs.altv.mp/gta/images/vehicle/models/phantom.png',
                 state: {
                     unlocked: true,
-                    bought: false,
-                    priceCash: 1010,
-                    needCash: 0,
+                    bought: true,
+                    priceCashForSale: 55000,
+                    canSale: true,
                 },
                 children: [
                     {
-                        name: 'Phantom 2',
-                        model: TruckModels.Phantom2,
-                        img: 'https://docs.altv.mp/gta/images/vehicle/models/phantom2.png',
+                        name: 'Phantom 3',
+                        model: TruckModels.Phantom3,
+                        img: 'https://docs.altv.mp/gta/images/vehicle/models/phantom3.png',
                         state: {
                             unlocked: false,
                             bought: false,
