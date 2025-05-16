@@ -20,6 +20,9 @@ export function ArrowsParentToChildren(props: ArrowsParentToChildrenProps) {
                 endAnchor={'bottom'}
                 path={'grid'}
                 dashness={!childTree.state.unlocked}
+                divContainerStyle={{
+                    opacity: !childTree.state.unlocked ? 0.5 : 1,
+                }}
             />
         );
     });

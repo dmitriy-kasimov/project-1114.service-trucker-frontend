@@ -38,6 +38,9 @@ export const TruckChild: FC<TruckChildProps> = ({ node }) => {
                 strokeWidth={2}
                 path={'grid'}
                 dashness={!truck.state.unlocked}
+                divContainerStyle={{
+                    opacity: !truck.state.unlocked ? 0.5 : 1,
+                }}
             />
         </>
     );
