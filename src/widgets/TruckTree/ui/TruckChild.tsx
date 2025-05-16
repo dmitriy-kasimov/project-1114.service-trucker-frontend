@@ -35,8 +35,9 @@ export const TruckChild: FC<TruckChildProps> = ({ node }) => {
                 start={`${node.name}`} //can be react ref
                 end={`${truck.model}`} //or an id
                 color={'var(--color-secondary)'}
-                strokeWidth={1.5}
+                strokeWidth={2}
                 path={'grid'}
+                dashness={!truck.state.unlocked}
             />
         </>
     );

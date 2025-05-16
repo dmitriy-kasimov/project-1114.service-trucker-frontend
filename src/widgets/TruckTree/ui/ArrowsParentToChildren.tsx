@@ -16,6 +16,7 @@ export function ArrowsParentToChildren(props: ArrowsParentToChildrenProps) {
             color={'var(--color-secondary)'}
             strokeWidth={1.5}
             path={'grid'}
+            dashness={!childTree.state.unlocked}
         />
     ));
 }
