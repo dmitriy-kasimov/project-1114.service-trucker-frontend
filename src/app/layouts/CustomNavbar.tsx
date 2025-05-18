@@ -8,6 +8,7 @@ import {
     Navbar,
     Text,
 } from '@project-1114/ui-kit';
+import { Back } from '@/shared/components/Back';
 
 export const CustomNavbar = () => {
     return (
@@ -18,7 +19,7 @@ export const CustomNavbar = () => {
                 justify={'between'}
                 style={{ padding: '0.5rem 0' }}
             >
-                <Text color={'main'}>Go back</Text>
+                <Back />
                 <HStack
                     align={'center'}
                     gap={'l'}
