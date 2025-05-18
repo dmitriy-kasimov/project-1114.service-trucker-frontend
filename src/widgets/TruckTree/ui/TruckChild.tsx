@@ -19,6 +19,7 @@ export const TruckChild: FC<TruckChildProps> = ({ node }) => {
                 model={truck.model}
                 img={truck.img}
                 name={truck.name}
+                transparent={!truck.state.unlocked}
                 buttonInteraction={
                     <UnlockedTruckButton
                         model={truck.model}
