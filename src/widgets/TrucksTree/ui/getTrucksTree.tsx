@@ -23,6 +23,7 @@ export const getTrucksTree = (tree: TTrucksTree[]) => {
                 id={node.model}
                 img={node.img}
                 model={node.model}
+                transparent={!node.state.unlocked}
                 buttonInteraction={
                     <UnlockedTruckButton
                         model={node.model}

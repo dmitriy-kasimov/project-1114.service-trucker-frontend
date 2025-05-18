@@ -2,6 +2,7 @@ import { FC, ReactElement } from 'react';
 import {
     AppImage,
     Card,
+    classNames,
     Icon,
     Skeleton,
     Text,
@@ -16,6 +17,7 @@ type TruckModuleCardProps = {
     name: string;
     img: string;
     buttonInteraction?: ReactElement;
+    transparent?: boolean;
 };
 
 export const TruckModuleCard: FC<TruckModuleCardProps> = ({
@@ -23,6 +25,7 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
     name,
     img,
     buttonInteraction,
+    transparent = false,
 }) => {
     const ModuleAvatar = (
         <AppImage
@@ -37,8 +40,23 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
         <div id={id} className={cls.EntityCardWrapper}>
             <VStack gap={'xxs'} align={'center'}>
                 <Card padding={'0'} className={cls.Card}>
-                    <div className={cls.imgWrapper}>{ModuleAvatar}</div>
-                    <Text weight={'600'} className={cls.Name}>
+                    <div
+                        className={classNames(
+                            cls.imgWrapper,
+                            { [cls.transparent]: transparent },
+                            [],
+                        )}
+                    >
+                        {ModuleAvatar}
+                    </div>
+                    <Text
+                        weight={'600'}
+                        className={classNames(
+                            cls.Name,
+                            { [cls.transparent]: transparent },
+                            [],
+                        )}
+                    >
                         {name}
                     </Text>
                     <div className={cls.Info}>
@@ -52,7 +70,6 @@ export const TruckModuleCard: FC<TruckModuleCardProps> = ({
                         </Tooltip>
                     </div>
                 </Card>
-
                 {buttonInteraction}
             </VStack>
         </div>

@@ -24,6 +24,7 @@ interface ITruckCard {
     link?: string;
     img?: string;
     size?: 's' | 'm';
+    transparent?: boolean;
 }
 export const TruckCard: FC<ITruckCard> = ({
     name,
@@ -32,6 +33,7 @@ export const TruckCard: FC<ITruckCard> = ({
     link,
     img,
     size = 'm',
+    transparent = false,
 }) => {
     const TruckAvatar = (
         <AppImage
@@ -51,7 +53,13 @@ export const TruckCard: FC<ITruckCard> = ({
                     className={classNames(cls.Card, {}, [cls[size]])}
                     variant={'transparent'}
                 >
-                    <div className={cls.imgWrapper}>
+                    <div
+                        className={classNames(
+                            cls.imgWrapper,
+                            { [cls.transparent]: transparent },
+                            [],
+                        )}
+                    >
                         {link ? (
                             <Link to={link}>{TruckAvatar}</Link>
                         ) : (
@@ -61,7 +69,11 @@ export const TruckCard: FC<ITruckCard> = ({
                     <Text
                         weight={'600'}
                         size={size === 'm' ? 'xl' : 'l'}
-                        className={cls.Name}
+                        className={classNames(
+                            cls.Name,
+                            { [cls.transparent]: transparent },
+                            [],
+                        )}
                     >
                         {name}
                     </Text>
